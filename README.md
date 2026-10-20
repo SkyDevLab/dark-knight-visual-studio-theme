@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <strong>A premium, cinematic Batman-inspired dark theme for the full Microsoft Visual Studio IDE.</strong><br/>
-  Featuring a distinctive Batcave workstation aesthetic optimized for professional C# and .NET development.
+  <strong>A premium, cinematic Batman-inspired dark theme for Microsoft Visual Studio 2022.</strong><br/>
+  Featuring a distinctive Batcave workstation aesthetic optimized for professional C# and .NET development, with an optional non-intrusive editor background system.
 </p>
 
 <p align="center">
@@ -23,19 +23,27 @@
 
 **Dark Knight** transforms Visual Studio 2022 into a sophisticated Batcave workstation. Engineered for professional .NET developers, it replaces standard high-glare surfaces with a balanced near-black charcoal foundation, deep graphite tool windows, muted Batman gold accents, and electric Gotham blue highlights.
 
-This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the official Visual Studio SDK, not a Visual Studio Code port. It provides deep coverage across the IDE shell, tool windows, editor canvas, Roslyn semantic colorizer, IntelliSense, debugger, and version control surfaces.
+This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the official Visual Studio SDK, not a Visual Studio Code port. It delivers:
+
+1. **Full IDE Theme Coverage:** 54 Visual Studio categories styled natively via compiled `.pkgdef` and `.vstheme` resources.
+2. **Professional C# & .NET Roslyn Highlighting:** Accessible semantic colorization with high WCAG AA/AAA contrast ratios.
+3. **Optional MEF Editor Background System:** Subtle Batcave workstation watermarks rendered behind code via official WPF editor APIs (`IWpfTextViewCreationListener`), with adjustable opacity and a dark tint shield.
+4. **Interactive Settings Interface:** Full configuration panel hosted both under **Tools > Options** and as a dedicated dockable **Tool Window**.
+5. **Original UI Assets:** Bespoke nocturnal vigilante branding, abstract emblem, status bar icon, tool window icon, surface texture, and 4 procedural background themes.
 
 ---
 
-## Showcase & Screenshots
+## Marketplace Banner & Showcase
+
+![Dark Knight Marketplace Banner](assets/marketplace_banner.png)
 
 ### 1. Code Editor & Professional C# Syntax
 ![C# Code Editor Preview](assets/screenshots/01_editor_csharp.png)
-*High-contrast C# 12 / .NET code editor: Keywords in Gotham blue, types in cool cyan, methods in soft blue, strings in muted Batman gold, and numbers in lavender.*
+*High-contrast C# 12 / .NET code editor: Keywords in Gotham blue (`#4D8DCC`), types in syntax cyan (`#42D9D0`), methods in soft blue (`#61AFEF`), strings in muted gold (`#E7B45A`), numbers in lavender (`#C678DD`), and comments in muted green (`#7F9B8A`).*
 
 ### 2. Solution Explorer & Batcave Tool Windows
 ![Solution Explorer & Tool Windows](assets/screenshots/02_solution_explorer_tool_windows.png)
-*Unified dark framing: Active tab featuring a Batman gold accent bar, secondary graphite tool windows, and distinct selection states.*
+*Unified dark framing: Active tab featuring a Batman gold accent bar, secondary graphite tool windows (`#171C25`), and distinct selection states.*
 
 ### 3. IntelliSense & Signature Help
 ![IntelliSense & Signature Help](assets/screenshots/03_intellisense_signature_help.png)
@@ -43,11 +51,11 @@ This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the of
 
 ### 4. Interactive Debugging & Breakpoints
 ![Debugger & Breakpoints](assets/screenshots/04_debugger_breakpoints.png)
-*Active execution pointer in Batman gold, breakpoint line highlight, Gotham blue status bar indicator, and Watch/Locals panels.*
+*Active execution pointer in emerald green (`#55D6A0`), breakpoint line highlight in deep burgundy (`#3B1D22`), Gotham blue status bar indicator, and Watch/Locals panels.*
 
 ### 5. Error List & Diagnostic Waves
 ![Error List & Diagnostics](assets/screenshots/05_error_list_output.png)
-*Accessible diagnostic colors: Clear red for compiler errors, warm amber for warnings, and Gotham blue for suggestions.*
+*Accessible diagnostic colors: Clear red (`#FF626B`) for compiler errors, warm amber (`#E8B84A`) for warnings, and Gotham blue for suggestions.*
 
 ---
 
@@ -57,69 +65,79 @@ The Dark Knight palette is carefully calibrated to prevent eye fatigue during ma
 
 | Role | Hex | Purpose / IDE Element |
 | :--- | :--- | :--- |
-| **Primary Background** | `#101216` | Main editor canvas, document well background, terminal background |
-| **Secondary Surface** | `#191D24` | Solution Explorer, Git Changes, Error List, Output window |
-| **Header Surface** | `#14171E` | Title bar, tab well backdrop, tool window header captions |
-| **Input / Card** | `#14171E` | Search inputs, text boxes, comboboxes, quick-find |
-| **Primary Accent** | `#E8B84A` | **Muted Batman Gold**: Active tab accent bar, cursor, string literals |
-| **Secondary Accent** | `#4D8DCC` | **Gotham Blue**: C# keywords, primary buttons, focus frames |
-| **Control Keywords** | `#5EA1E6` | Electric Gotham blue: `if`, `else`, `return`, `await`, `async` |
-| **Types & Structs** | `#4EC9B0` | Cool cyan: Classes, record structs, enums, generic types |
-| **Interfaces** | `#52BAA7` | Soft mint cyan: `IServiceCollection`, `IDisposable` |
-| **Methods & Calls** | `#61AFEF` | Soft blue: Method definitions and member invocations |
-| **Numeric Literals** | `#C678DD` | Soft lavender: Integers, floats, decimals, booleans |
-| **Comments & Docs** | `#62727B` | Muted green-gray: Code comments and XML doc text |
-| **Primary Text** | `#E6E8ED` | Soft white: Plain text, local variables, operators, punctuation |
-| **Secondary Text** | `#929BA8` | Cool gray: Inactive tab text, tool window labels, line numbers |
-| **Selection** | `#1B385C` | Deep Gotham navy: High-contrast selection background |
-| **Success** | `#38A169` | Muted emerald green: Git additions, build success |
-| **Warnings** | `#E09F3E` | Warm amber: Compiler warnings, constants, escape sequences |
-| **Errors** | `#E5484D` | Clear red: Compiler diagnostics, breakpoint glyphs |
+| **Editor Canvas** | `#101216` | Main editor canvas, document well background, terminal background |
+| **Tool Window Background** | `#171C25` | Solution Explorer, Git Changes, Error List, Output window |
+| **Secondary Surface** | `#1C2330` | Title bar, tab well backdrop, menus, borders, dialog cards |
+| **Primary Text** | `#E6EAF0` | Soft white: Plain text, local variables, operators, punctuation |
+| **Muted Text** | `#929BA8` | Cool gray: Inactive tab text, tool window labels, line numbers |
+| **Accent Gold** | `#E8B84A` | **Batman Gold**: Active tab accent bar, cursor, warning indicators |
+| **Accent Blue** | `#4D8DCC` | **Gotham Blue**: C# keywords, primary buttons, focus frames |
+| **Syntax Cyan** | `#42D9D0` | Classes, record structs, enums, interfaces, generic types |
+| **String Color** | `#E7B45A` | Muted gold: String literals, verbatim strings, CSS values |
+| **Comment Color** | `#7F9B8A` | Muted green-gray: Code comments and XML doc text |
+| **Error Color** | `#FF626B` | Clear red: Compiler diagnostics, error waves, breakpoint glyphs |
+| **Success Color** | `#55D6A0` | Emerald green: Execution statement pointer, Git additions, build success |
+| **Active Selection** | `#1B385C` | Deep Gotham navy: High-contrast selection background |
+| **Inactive Selection** | `#162C46` | Unfocused text selection background |
 
 ---
 
-## Full IDE Theme Coverage
+## Optional Editor Background System
 
-The theme provides comprehensive styling across **54 Visual Studio categories**:
+The background watermark system is implemented as a **separate, non-intrusive MEF editor extension** that complements the theme. Background images are optional decorative assets and **never substitute for theme colors**; the editor remains 100% usable without them.
 
-- **Shell & Windows:** Main IDE frame, title bar, menu bar, command surfaces, toolbars, and status bar.
-- **Document Tabs:** Active document tab highlighted with a top Batman Gold accent line; inactive tabs blend smoothly into deep graphite.
-- **Tool Windows:** Solution Explorer, Properties, Git Changes, Error List, Output window, Integrated Terminal, Task Runner Explorer, and Toolbox.
-- **Code Editor:** Canvas background, line numbers, current line highlighting, selection, matching braces, visible whitespace, and collapsible margin indicators.
-- **Language Services:** Fully optimized for C#, .NET, ASP.NET Core Razor, SQL / T-SQL, JSON, XML, HTML, CSS, JavaScript, and TypeScript.
-- **IntelliSense:** Statement completion lists, parameter info, signature help, and Quick Info hover tooltips.
-- **Search & Navigation:** Quick Find, Find in Files dialog, Go to All (Ctrl+T) popup, and Search Results grids.
-- **Debugging:** Active statement highlight (gold arrow), breakpoint indicators, Watch, Autos, Locals, Call Stack, and Gotham blue debugging status bar.
-- **Diagnostics:** Error squiggles, warning waves, and informational badges.
-- **Version Control:** Git Changes pane, staged files, commit interface, and diff viewing surfaces.
+### Safety & Usability Architecture:
+- **Strict Z-Ordering:** Injected via an `IAdornmentLayer` ordered `Before = PredefinedAdornmentLayers.Text`. Code text, selection geometry, carets, breakpoints, squiggles, and IntelliSense windows render physically in front.
+- **Hit-Test Transparent:** All background visual elements have `IsHitTestVisible = false`. Mouse clicks, dragging, selection, and margin clicks pass straight to the editor with zero interference.
+- **Dual-Layer Contrast Shield:** A dark translucent tint overlay (`#101216` at 70%) sits between the watermark image and the text layer.
+- **Readability Defaults:** Backgrounds are **disabled by default**, and feature a very low opacity (8%) when enabled.
+
+### 4 Original Background Presets:
+1. **Batcave Mainframe:** Terminal diagnostics, holographic HUD, circular radar crosshairs, and hex grid telemetry in Gotham blue and gold.
+2. **Gotham Skyline:** Nocturnal cityscape silhouette featuring art-deco towers, spires, and dual searchlights sweeping night clouds.
+3. **Gargoyle Vigil:** Architectural gargoyle perched on a Gothic stone ledge overlooking misty Gotham below.
+4. **Batmobile Tech Grid:** Tactical vehicle CAD blueprint schematics, dimensional callouts, and Wayne Enterprises telemetry.
+5. **Custom Image:** Support for loading any local `.png`, `.jpg`, or `.bmp` file.
+
+---
+
+## Settings Interface
+
+Customize the Batcave background in real time through two official Visual Studio interfaces:
+
+1. **Tools > Options:** Navigate to **Tools > Options > Dark Knight Theme > Batcave Background**.
+2. **Dockable Tool Window:** Open **View > Other Windows > Dark Knight — Batcave Background Settings**.
+
+### Configurable Controls:
+- **Enable/Disable Toggle:** Instant master switch for editor watermarks.
+- **Visual Preset Selector:** 4 graphical thumbnail cards for one-click preset switching.
+- **Custom Image Picker:** File browser to load your own image.
+- **Image Opacity Slider:** Fine-tune watermark intensity from 1% to 35% (default 8%).
+- **Dark Tint Overlay Slider:** Adjust the contrast shield between 0% and 95% (default 70%).
+- **Positioning & Scaling:** Choose **BottomRight** (recommended), **Center**, or **UniformToFill**.
+- **Reset to Defaults:** One-click restoration of clean baseline settings.
+- **Real-Time Synchronization:** Settings changes instantly broadcast to all open editor tabs without restarting Visual Studio.
 
 ---
 
 ## Installation
 
 ### Method 1: Pre-Built VSIX Package (Recommended)
-1. Close all running instances of Microsoft Visual Studio 2022.
-2. Navigate to the `dist` folder:
-   ```
-   dist\DarkKnightTheme.vsix
-   ```
-3. Double-click **`DarkKnightTheme.vsix`** to launch the Visual Studio Extension Installer.
-4. Select your Visual Studio 2022 installation (Community, Professional, or Enterprise) and click **Install**.
-5. Launch Visual Studio 2022.
+1. Close running instances of Microsoft Visual Studio 2022.
+2. Open `dist\DarkKnightTheme.vsix`.
+3. Select your Visual Studio 2022 installation (Community, Professional, or Enterprise) and click **Install**.
+4. Launch Visual Studio 2022.
 
 ### Method 2: Command-Line Installation via VSIXInstaller
 ```powershell
 & "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VSIXInstaller.exe" dist\DarkKnightTheme.vsix
 ```
 
-### Method 3: Build from Source
-If you wish to compile the VSIX package yourself:
-1. Ensure the **Visual Studio extension development** workload is installed.
-2. Open PowerShell as Administrator and run the build script:
-   ```powershell
-   .\build\build.ps1
-   ```
-3. The build script validates prerequisites, regenerates all theme assets, compiles the `.vstheme` into binary `.pkgdef`, invokes MSBuild, and outputs `dist\DarkKnightTheme.vsix`.
+### Method 3: Automated Build from Source
+```powershell
+.\build\build.ps1
+```
+The automated script validates prerequisites, regenerates all background and branding graphics, compiles the `.vstheme` into binary `.pkgdef`, runs MSBuild with `CreatePkgDef`, and outputs `dist\DarkKnightTheme.vsix`.
 
 ---
 
@@ -127,7 +145,7 @@ If you wish to compile the VSIX package yourself:
 
 After installation, activate Dark Knight in Visual Studio:
 
-1. In Visual Studio, click **Tools** in the top menu bar.
+1. Click **Tools** in the top menu bar.
 2. Select **Theme > Dark Knight**.
 
 *Alternatively:*
@@ -138,51 +156,53 @@ After installation, activate Dark Knight in Visual Studio:
 
 ---
 
-## Switching or Reverting Themes
-
-- **Switching Themes:** To switch to another theme at any time, select **Tools > Theme > Dark** (or **Blue**, **Light**).
-- **Restoring Font/Color Defaults:** If you have previously customized individual colors under **Tools > Options > Environment > Fonts and Colors**, click **Use Defaults** to view the Dark Knight baseline colors.
-- **Uninstallation:**
-  1. Open Visual Studio 2022.
-  2. Navigate to **Extensions > Manage Extensions**.
-  3. Under **Installed**, select **Dark Knight — Gotham Dark Theme for Visual Studio**.
-  4. Click **Uninstall** and restart Visual Studio.
-
----
-
 ## Project Structure
 
 ```
 bold-lovelace/
 ├── DarkKnightTheme.sln                   # Visual Studio 2022 Solution
 ├── dist/
-│   └── DarkKnightTheme.vsix             # Distributable VSIX Package (77 KB)
+│   └── DarkKnightTheme.vsix             # Distributable VSIX Package (451 KB)
 ├── src/
 │   └── DarkKnightTheme/
-│       ├── DarkKnightTheme.csproj       # VSIX Project File
+│       ├── DarkKnightTheme.csproj       # VSIX & MEF Project File
 │       ├── source.extension.vsixmanifest# VSIX v2 Manifest (AMD64, VS 2022)
+│       ├── DarkKnightPackage.cs         # AsyncPackage Entry Point
 │       ├── DarkKnight.vstheme           # XML Source Theme Definition (54 Categories)
-│       ├── DarkKnight.pkgdef            # Compiled Binary Package Definition
+│       ├── DarkKnight.pkgdef            # Compiled Binary Theme Package Definition
 │       ├── LICENSE.txt                  # MIT License & Trademark Notice
-│       ├── Properties/
-│       │   └── AssemblyInfo.cs          # Assembly Metadata
+│       ├── Background/
+│       │   ├── DarkKnightBackgroundAdornmentLayer.cs    # MEF Adornment Definition
+│       │   ├── DarkKnightBackgroundCreationListener.cs # IWpfTextViewCreationListener
+│       │   └── DarkKnightBackgroundAdornment.cs       # Viewport Watermark & Overlay
+│       ├── Settings/
+│       │   └── DarkKnightSettings.cs    # Settings Model & JSON Persistence
+│       ├── UI/
+│       │   ├── DarkKnightSettingsControl.xaml         # WPF Settings Panel
+│       │   ├── DarkKnightSettingsControl.xaml.cs      # UI Code-Behind
+│       │   ├── DarkKnightSettingsPage.cs              # Tools > Options DialogPage
+│       │   └── DarkKnightSettingsToolWindow.cs        # Dockable ToolWindowPane
 │       └── Resources/
 │           ├── Icon.png                 # 128x128 Extension Icon
 │           ├── Preview.png              # Marketplace Hero Preview
-│           └── batcave-icon.svg         # Vector Batcave Emblem
+│           ├── statusbar_icon.png       # 16x16 Status Bar Icon
+│           ├── toolwindow_icon.png      # 16x16 Tool Window Icon
+│           ├── dark_texture.png         # 64x64 Seamless Texture
+│           └── Backgrounds/             # 4 Full-Res Backgrounds + Thumbnails
+│               ├── batcave_mainframe.png & thumb
+│               ├── gotham_skyline.png & thumb
+│               ├── gargoyle_vigil.png & thumb
+│               └── batmobile_techgrid.png & thumb
 ├── assets/
 │   ├── icon_256.png                     # High-Resolution 256x256 Icon
-│   ├── icon.svg                         # Vector Source Icon
-│   └── screenshots/
-│       ├── 01_editor_csharp.png         # Editor & C# Highlighting
-│       ├── 02_solution_explorer_tool_windows.png
-│       ├── 03_intellisense_signature_help.png
-│       ├── 04_debugger_breakpoints.png
-│       └── 05_error_list_output.png
+│   ├── emblem.png                       # Gold & Blue Abstract Vigilante Emblem
+│   ├── marketplace_banner.png           # 1280x640 Marketplace Banner
+│   └── screenshots/                     # 5 High-Resolution Showcase Previews
 ├── build/
 │   ├── build.ps1                        # Master Build Script
 │   ├── generate_theme.ps1               # Theme XML & PKGDEF Compiler
-│   └── generate_graphics.ps1            # Icon & Preview Asset Generator
+│   ├── generate_backgrounds.ps1         # Original Background Artwork Generator
+│   └── generate_graphics.ps1            # Icon & Preview Screenshot Generator
 ├── docs/
 │   ├── COLOR_PALETTE.md                 # Complete Palette & WCAG Specifications
 │   ├── ARCHITECTURE.md                  # Extensibility SDK & PKGDEF Architecture
@@ -192,7 +212,7 @@ bold-lovelace/
 
 ---
 
-## Technical Architecture & Fallback Mechanism
+## Fallback Architecture & Stability Guarantee
 
 Visual Studio custom themes rely on a fallback inheritance model. In `DarkKnight.vstheme` and `DarkKnight.pkgdef`, the theme specifies:
 

@@ -21,35 +21,35 @@ $jsonContent = @'
   "type": "dark",
   "colors": {
     "activityBar.background": "#101216",
-    "activityBar.foreground": "#E6E8ED",
+    "activityBar.foreground": "#E6EAF0",
     "activityBar.inactiveForeground": "#929BA8",
     "activityBar.activeBorder": "#E8B84A",
     "activityBarBadge.background": "#E8B84A",
     "activityBarBadge.foreground": "#101216",
-    "sideBar.background": "#191D24",
-    "sideBar.foreground": "#E6E8ED",
-    "sideBar.border": "#232833",
-    "sideBarTitle.foreground": "#E6E8ED",
-    "sideBarSectionHeader.background": "#14171E",
-    "sideBarSectionHeader.foreground": "#E6E8ED",
-    "sideBarSectionHeader.border": "#232833",
-    "editorGroupHeader.tabsBackground": "#14171E",
-    "editorGroupHeader.tabsBorder": "#232833",
+    "sideBar.background": "#171C25",
+    "sideBar.foreground": "#E6EAF0",
+    "sideBar.border": "#1C2330",
+    "sideBarTitle.foreground": "#E6EAF0",
+    "sideBarSectionHeader.background": "#1C2330",
+    "sideBarSectionHeader.foreground": "#E6EAF0",
+    "sideBarSectionHeader.border": "#1C2330",
+    "editorGroupHeader.tabsBackground": "#171C25",
+    "editorGroupHeader.tabsBorder": "#1C2330",
     "tab.activeBackground": "#101216",
-    "tab.activeForeground": "#E6E8ED",
+    "tab.activeForeground": "#E6EAF0",
     "tab.activeBorder": "#E8B84A",
     "tab.activeBorderTop": "#E8B84A",
-    "tab.inactiveBackground": "#191D24",
+    "tab.inactiveBackground": "#171C25",
     "tab.inactiveForeground": "#929BA8",
-    "tab.border": "#232833",
+    "tab.border": "#1C2330",
     "tab.unfocusedActiveBackground": "#101216",
     "tab.unfocusedActiveForeground": "#C5CBD4",
     "tab.unfocusedActiveBorderTop": "#C69B37",
-    "tab.unfocusedInactiveBackground": "#161920",
+    "tab.unfocusedInactiveBackground": "#171C25",
     "tab.unfocusedInactiveForeground": "#707A8A",
     "editor.background": "#101216",
-    "editor.foreground": "#E6E8ED",
-    "editor.lineHighlightBackground": "#161A22",
+    "editor.foreground": "#E6EAF0",
+    "editor.lineHighlightBackground": "#161B23",
     "editor.lineHighlightBorder": "#00000000",
     "editor.selectionBackground": "#1B385C",
     "editor.selectionHighlightBackground": "#264F78",
@@ -58,147 +58,147 @@ $jsonContent = @'
     "editorLineNumber.foreground": "#4E5766",
     "editorLineNumber.activeForeground": "#E8B84A",
     "editorWhitespace.foreground": "#2A323E",
-    "editorIndentGuide.background": "#232833",
+    "editorIndentGuide.background": "#1C2330",
     "editorIndentGuide.activeBackground": "#4D8DCC",
-    "editorRuler.foreground": "#232833",
+    "editorRuler.foreground": "#1C2330",
     "editorBracketMatch.background": "#253545",
     "editorBracketMatch.border": "#4D8DCC",
-    "editorOverviewRuler.border": "#232833",
+    "editorOverviewRuler.border": "#1C2330",
     "editorGutter.background": "#101216",
     "editorGutter.modifiedBackground": "#E8B84A",
-    "editorGutter.addedBackground": "#38A169",
-    "editorGutter.deletedBackground": "#E5484D",
-    "editorError.foreground": "#E5484D",
-    "editorWarning.foreground": "#E09F3E",
+    "editorGutter.addedBackground": "#55D6A0",
+    "editorGutter.deletedBackground": "#FF626B",
+    "editorError.foreground": "#FF626B",
+    "editorWarning.foreground": "#E8B84A",
     "editorInfo.foreground": "#4D8DCC",
     "statusBar.background": "#12151B",
     "statusBar.foreground": "#929BA8",
-    "statusBar.border": "#232833",
+    "statusBar.border": "#1C2330",
     "statusBar.debuggingBackground": "#1A365D",
-    "statusBar.debuggingForeground": "#E6E8ED",
+    "statusBar.debuggingForeground": "#E6EAF0",
     "statusBar.noFolderBackground": "#101216",
     "statusBarItem.remoteBackground": "#4D8DCC",
     "statusBarItem.remoteForeground": "#101216",
     "statusBarItem.prominentBackground": "#E8B84A",
     "statusBarItem.prominentForeground": "#101216",
-    "titleBar.activeBackground": "#12151C",
-    "titleBar.activeForeground": "#E6E8ED",
+    "titleBar.activeBackground": "#171C25",
+    "titleBar.activeForeground": "#E6EAF0",
     "titleBar.inactiveBackground": "#101216",
     "titleBar.inactiveForeground": "#929BA8",
-    "titleBar.border": "#232833",
-    "menu.background": "#191D24",
-    "menu.foreground": "#E6E8ED",
-    "menu.selectionBackground": "#252B35",
-    "menu.selectionForeground": "#E6E8ED",
+    "titleBar.border": "#1C2330",
+    "menu.background": "#171C25",
+    "menu.foreground": "#E6EAF0",
+    "menu.selectionBackground": "#1C2330",
+    "menu.selectionForeground": "#E6EAF0",
     "menu.selectionBorder": "#4D8DCC",
-    "menu.separatorBackground": "#232833",
-    "menu.border": "#232833",
-    "menubar.selectionBackground": "#252B35",
-    "menubar.selectionForeground": "#E6E8ED",
+    "menu.separatorBackground": "#1C2330",
+    "menu.border": "#1C2330",
+    "menubar.selectionBackground": "#1C2330",
+    "menubar.selectionForeground": "#E6EAF0",
     "menubar.selectionBorder": "#4D8DCC",
     "list.activeSelectionBackground": "#1B385C",
-    "list.activeSelectionForeground": "#E6E8ED",
+    "list.activeSelectionForeground": "#E6EAF0",
     "list.inactiveSelectionBackground": "#162C46",
     "list.inactiveSelectionForeground": "#929BA8",
-    "list.hoverBackground": "#202530",
-    "list.hoverForeground": "#E6E8ED",
+    "list.hoverBackground": "#1C2330",
+    "list.hoverForeground": "#E6EAF0",
     "list.dropBackground": "#252B35",
     "list.highlightForeground": "#E8B84A",
-    "tree.indentGuidesStroke": "#232833",
+    "tree.indentGuidesStroke": "#1C2330",
     "button.background": "#4D8DCC",
     "button.foreground": "#FFFFFF",
     "button.hoverBackground": "#3A6F9E",
-    "button.secondaryBackground": "#252B35",
-    "button.secondaryForeground": "#E6E8ED",
-    "button.secondaryHoverBackground": "#2F3642",
-    "input.background": "#14171E",
-    "input.foreground": "#E6E8ED",
-    "input.border": "#2A313D",
+    "button.secondaryBackground": "#1C2330",
+    "button.secondaryForeground": "#E6EAF0",
+    "button.secondaryHoverBackground": "#252E3F",
+    "input.background": "#1C2330",
+    "input.foreground": "#E6EAF0",
+    "input.border": "#2A3445",
     "input.placeholderForeground": "#5A6270",
     "inputOption.activeBorder": "#4D8DCC",
     "inputOption.activeBackground": "#1B385C",
-    "inputOption.activeForeground": "#E6E8ED",
+    "inputOption.activeForeground": "#E6EAF0",
     "inputValidation.errorBackground": "#3B1D22",
-    "inputValidation.errorBorder": "#E5484D",
-    "inputValidation.errorForeground": "#E6E8ED",
+    "inputValidation.errorBorder": "#FF626B",
+    "inputValidation.errorForeground": "#E6EAF0",
     "inputValidation.warningBackground": "#382F18",
-    "inputValidation.warningBorder": "#E09F3E",
-    "inputValidation.warningForeground": "#E6E8ED",
+    "inputValidation.warningBorder": "#E8B84A",
+    "inputValidation.warningForeground": "#E6EAF0",
     "inputValidation.infoBackground": "#16283D",
     "inputValidation.infoBorder": "#4D8DCC",
-    "inputValidation.infoForeground": "#E6E8ED",
-    "dropdown.background": "#14171E",
-    "dropdown.foreground": "#E6E8ED",
-    "dropdown.border": "#2A313D",
-    "dropdown.listBackground": "#191D24",
+    "inputValidation.infoForeground": "#E6EAF0",
+    "dropdown.background": "#1C2330",
+    "dropdown.foreground": "#E6EAF0",
+    "dropdown.border": "#2A3445",
+    "dropdown.listBackground": "#171C25",
     "scrollbarSlider.background": "#2E374480",
     "scrollbarSlider.hoverBackground": "#3E4A5CB0",
     "scrollbarSlider.activeBackground": "#E8B84ACC",
     "badge.background": "#E8B84A",
     "badge.foreground": "#101216",
     "progressBar.background": "#E8B84A",
-    "notificationCenterHeader.background": "#14171E",
-    "notificationCenterHeader.foreground": "#E6E8ED",
-    "notifications.background": "#191D24",
-    "notifications.foreground": "#E6E8ED",
-    "notifications.border": "#232833",
+    "notificationCenterHeader.background": "#1C2330",
+    "notificationCenterHeader.foreground": "#E6EAF0",
+    "notifications.background": "#171C25",
+    "notifications.foreground": "#E6EAF0",
+    "notifications.border": "#1C2330",
     "notificationLink.foreground": "#4D8DCC",
     "peekView.border": "#4D8DCC",
-    "peekViewEditor.background": "#151820",
-    "peekViewEditorGutter.background": "#151820",
+    "peekViewEditor.background": "#14171E",
+    "peekViewEditorGutter.background": "#14171E",
     "peekViewEditor.matchHighlightBackground": "#264F78",
-    "peekViewResult.background": "#191D24",
-    "peekViewResult.fileForeground": "#E6E8ED",
+    "peekViewResult.background": "#171C25",
+    "peekViewResult.fileForeground": "#E6EAF0",
     "peekViewResult.lineForeground": "#929BA8",
     "peekViewResult.matchHighlightBackground": "#264F78",
     "peekViewResult.selectionBackground": "#1B385C",
-    "peekViewResult.selectionForeground": "#E6E8ED",
-    "peekViewTitle.background": "#14171E",
+    "peekViewResult.selectionForeground": "#E6EAF0",
+    "peekViewTitle.background": "#1C2330",
     "peekViewTitleDescription.foreground": "#929BA8",
-    "peekViewTitleLabel.foreground": "#E6E8ED",
-    "panel.background": "#191D24",
-    "panel.border": "#232833",
+    "peekViewTitleLabel.foreground": "#E6EAF0",
+    "panel.background": "#171C25",
+    "panel.border": "#1C2330",
     "panelTitle.activeBorder": "#E8B84A",
-    "panelTitle.activeForeground": "#E6E8ED",
+    "panelTitle.activeForeground": "#E6EAF0",
     "panelTitle.inactiveForeground": "#929BA8",
     "terminal.background": "#101216",
-    "terminal.foreground": "#E6E8ED",
+    "terminal.foreground": "#E6EAF0",
     "terminal.ansiBlack": "#101216",
-    "terminal.ansiRed": "#E5484D",
-    "terminal.ansiGreen": "#38A169",
+    "terminal.ansiRed": "#FF626B",
+    "terminal.ansiGreen": "#55D6A0",
     "terminal.ansiYellow": "#E8B84A",
     "terminal.ansiBlue": "#4D8DCC",
     "terminal.ansiMagenta": "#C678DD",
-    "terminal.ansiCyan": "#56B6C2",
-    "terminal.ansiWhite": "#E6E8ED",
+    "terminal.ansiCyan": "#42D9D0",
+    "terminal.ansiWhite": "#E6EAF0",
     "terminal.ansiBrightBlack": "#4E5766",
-    "terminal.ansiBrightRed": "#F85149",
-    "terminal.ansiBrightGreen": "#48BB78",
+    "terminal.ansiBrightRed": "#FF757E",
+    "terminal.ansiBrightGreen": "#68E4B0",
     "terminal.ansiBrightYellow": "#F5D061",
     "terminal.ansiBrightBlue": "#6DB3F2",
     "terminal.ansiBrightMagenta": "#D48EEC",
-    "terminal.ansiBrightCyan": "#70C9D4",
+    "terminal.ansiBrightCyan": "#61E8DF",
     "terminal.ansiBrightWhite": "#FFFFFF",
     "gitDecoration.modifiedResourceForeground": "#E8B84A",
-    "gitDecoration.untrackedResourceForeground": "#38A169",
+    "gitDecoration.untrackedResourceForeground": "#55D6A0",
     "gitDecoration.ignoredResourceForeground": "#5A6270",
-    "gitDecoration.deletedResourceForeground": "#E5484D",
-    "gitDecoration.conflictingResourceForeground": "#E09F3E",
+    "gitDecoration.deletedResourceForeground": "#FF626B",
+    "gitDecoration.conflictingResourceForeground": "#E8B84A",
     "gitDecoration.stageModifiedResourceForeground": "#E8B84A",
-    "gitDecoration.stageDeletedResourceForeground": "#E5484D",
-    "debugToolBar.background": "#191D24",
-    "debugToolBar.border": "#232833",
-    "editorWidget.background": "#191D24",
-    "editorWidget.foreground": "#E6E8ED",
-    "editorWidget.border": "#232833",
-    "editorSuggestWidget.background": "#191D24",
+    "gitDecoration.stageDeletedResourceForeground": "#FF626B",
+    "debugToolBar.background": "#171C25",
+    "debugToolBar.border": "#1C2330",
+    "editorWidget.background": "#171C25",
+    "editorWidget.foreground": "#E6EAF0",
+    "editorWidget.border": "#1C2330",
+    "editorSuggestWidget.background": "#171C25",
     "editorSuggestWidget.border": "#4D8DCC",
-    "editorSuggestWidget.foreground": "#E6E8ED",
+    "editorSuggestWidget.foreground": "#E6EAF0",
     "editorSuggestWidget.selectedBackground": "#1B385C",
     "editorSuggestWidget.highlightForeground": "#E8B84A",
-    "editorHoverWidget.background": "#191D24",
+    "editorHoverWidget.background": "#171C25",
     "editorHoverWidget.border": "#4D8DCC",
-    "editorHoverWidget.foreground": "#E6E8ED"
+    "editorHoverWidget.foreground": "#E6EAF0"
   },
   "tokenColors": [
     {
@@ -211,7 +211,7 @@ $jsonContent = @'
         "punctuation.definition.comment"
       ],
       "settings": {
-        "foreground": "#62727B",
+        "foreground": "#7F9B8A",
         "fontStyle": "italic"
       }
     },
@@ -257,7 +257,7 @@ $jsonContent = @'
         "support.type"
       ],
       "settings": {
-        "foreground": "#4EC9B0"
+        "foreground": "#42D9D0"
       }
     },
     {
@@ -267,7 +267,7 @@ $jsonContent = @'
         "entity.name.type.type-parameter"
       ],
       "settings": {
-        "foreground": "#52BAA7"
+        "foreground": "#52E3DA"
       }
     },
     {
@@ -295,7 +295,7 @@ $jsonContent = @'
         "string.interpolated"
       ],
       "settings": {
-        "foreground": "#E8B84A"
+        "foreground": "#E7B45A"
       }
     },
     {
@@ -341,7 +341,7 @@ $jsonContent = @'
         "meta.definition.variable"
       ],
       "settings": {
-        "foreground": "#E6E8ED"
+        "foreground": "#E6EAF0"
       }
     },
     {
@@ -375,7 +375,7 @@ $jsonContent = @'
         "punctuation.definition.parameters"
       ],
       "settings": {
-        "foreground": "#E6E8ED"
+        "foreground": "#E6EAF0"
       }
     },
     {
@@ -394,7 +394,7 @@ $jsonContent = @'
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "#56B6C2"
+        "foreground": "#42D9D0"
       }
     },
     {
@@ -403,7 +403,7 @@ $jsonContent = @'
         "support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#56B6C2"
+        "foreground": "#42D9D0"
       }
     },
     {
@@ -412,7 +412,7 @@ $jsonContent = @'
         "support.type.property-name.css"
       ],
       "settings": {
-        "foreground": "#56B6C2"
+        "foreground": "#42D9D0"
       }
     },
     {
@@ -421,7 +421,7 @@ $jsonContent = @'
         "support.constant.property-value.css"
       ],
       "settings": {
-        "foreground": "#E8B84A"
+        "foreground": "#E7B45A"
       }
     },
     {
@@ -526,30 +526,30 @@ function Get-OrCreateCategory {
 
 # 1. Enhance Environment Category
 $envCat = Get-OrCreateCategory $themeElement "Environment" "{624ed9c3-bdfd-41fa-96c3-7c824ea32e3d}"
-Set-ThemeColor $envCat "MainWindowActive" "FF101216" "FFE6E8ED"
+Set-ThemeColor $envCat "MainWindowActive" "FF101216" "FFE6EAF0"
 Set-ThemeColor $envCat "MainWindowInactive" "FF101216" "FF929BA8"
-Set-ThemeColor $envCat "TitleBarActive" "FF12151C" "FFE6E8ED"
+Set-ThemeColor $envCat "TitleBarActive" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $envCat "TitleBarInactive" "FF101216" "FF929BA8"
-Set-ThemeColor $envCat "CommandBarGradientBegin" "FF191D24" "FFE6E8ED"
-Set-ThemeColor $envCat "CommandBarGradientEnd" "FF191D24" "FFE6E8ED"
-Set-ThemeColor $envCat "CommandBarBorder" "FF232833" $null
-Set-ThemeColor $envCat "CommandBarMenuBackgroundGradientBegin" "FF191D24" $null
-Set-ThemeColor $envCat "CommandBarMenuBackgroundGradientEnd" "FF191D24" $null
-Set-ThemeColor $envCat "CommandBarMenuBorder" "FF232833" $null
-Set-ThemeColor $envCat "CommandBarMenuItemMouseOver" "FF252B35" "FFE6E8ED"
+Set-ThemeColor $envCat "CommandBarGradientBegin" "FF171C25" "FFE6EAF0"
+Set-ThemeColor $envCat "CommandBarGradientEnd" "FF171C25" "FFE6EAF0"
+Set-ThemeColor $envCat "CommandBarBorder" "FF1C2330" $null
+Set-ThemeColor $envCat "CommandBarMenuBackgroundGradientBegin" "FF171C25" $null
+Set-ThemeColor $envCat "CommandBarMenuBackgroundGradientEnd" "FF171C25" $null
+Set-ThemeColor $envCat "CommandBarMenuBorder" "FF1C2330" $null
+Set-ThemeColor $envCat "CommandBarMenuItemMouseOver" "FF1C2330" "FFE6EAF0"
 Set-ThemeColor $envCat "CommandBarMenuItemMouseOverBorder" "FF4D8DCC" $null
 Set-ThemeColor $envCat "StatusBarDefault" "FF12151B" "FF929BA8"
-Set-ThemeColor $envCat "StatusBarDebugging" "FF1A365D" "FFE6E8ED"
-Set-ThemeColor $envCat "StatusBarBuilding" "FF191D24" "FFE8B84A"
+Set-ThemeColor $envCat "StatusBarDebugging" "FF1A365D" "FFE6EAF0"
+Set-ThemeColor $envCat "StatusBarBuilding" "FF171C25" "FFE8B84A"
 Set-ThemeColor $envCat "StatusBarNoSolution" "FF101216" "FF929BA8"
 Set-ThemeColor $envCat "StatusBarText" $null "FF929BA8"
-Set-ThemeColor $envCat "StatusBarHighlight" "FF252B35" "FFE8B84A"
-Set-ThemeColor $envCat "ToolWindowBackground" "FF191D24" "FFE6E8ED"
-Set-ThemeColor $envCat "ToolWindowBorder" "FF232833" $null
-Set-ThemeColor $envCat "ToolWindowTabSelectedTab" "FF191D24" "FFE6E8ED"
+Set-ThemeColor $envCat "StatusBarHighlight" "FF1C2330" "FFE8B84A"
+Set-ThemeColor $envCat "ToolWindowBackground" "FF171C25" "FFE6EAF0"
+Set-ThemeColor $envCat "ToolWindowBorder" "FF1C2330" $null
+Set-ThemeColor $envCat "ToolWindowTabSelectedTab" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $envCat "ToolWindowTabSelectedBorder" "FFE8B84A" $null
-Set-ThemeColor $envCat "FileTabBackground" "FF191D24" "FF929BA8"
-Set-ThemeColor $envCat "FileTabBorder" "FF232833" $null
+Set-ThemeColor $envCat "FileTabBackground" "FF171C25" "FF929BA8"
+Set-ThemeColor $envCat "FileTabBorder" "FF1C2330" $null
 Set-ThemeColor $envCat "FileTabSelectedBorder" "FFE8B84A" $null
 Set-ThemeColor $envCat "ScrollBar" "FF101216" $null
 Set-ThemeColor $envCat "ScrollBarArrowBackground" "FF101216" $null
@@ -559,33 +559,33 @@ Set-ThemeColor $envCat "ScrollBarThumbPressed" "FFE8B84A" $null
 
 # 2. Text Editor Category (Fonts & Colors Text Editor Category: {a27b4e24-a735-4d1d-b8e7-9716e1e3d8e0})
 $textEditorCat = Get-OrCreateCategory $themeElement "Text Editor" "{a27b4e24-a735-4d1d-b8e7-9716e1e3d8e0}"
-Set-ThemeColor $textEditorCat "Plain Text" "FF101216" "FFE6E8ED"
-Set-ThemeColor $textEditorCat "Selected Text" "FF1B385C" "FFE6E8ED"
+Set-ThemeColor $textEditorCat "Plain Text" "FF101216" "FFE6EAF0"
+Set-ThemeColor $textEditorCat "Selected Text" "FF1B385C" "FFE6EAF0"
 Set-ThemeColor $textEditorCat "Inactive Selected Text" "FF162C46" "FFC5CBD4"
 Set-ThemeColor $textEditorCat "Line Number" "FF101216" "FF4E5766"
-Set-ThemeColor $textEditorCat "CurrentLineActiveFormat" "FF161A22" $null
+Set-ThemeColor $textEditorCat "CurrentLineActiveFormat" "FF161B23" $null
 Set-ThemeColor $textEditorCat "Visible White Space" $null "FF2A323E"
 Set-ThemeColor $textEditorCat "Indicator Margin" "FF101216" $null
 Set-ThemeColor $textEditorCat "Collapsible Text" $null "FFE8B84A"
-Set-ThemeColor $textEditorCat "Breakpoint (Enabled)" "FF3B1D22" "FFE6E8ED"
-Set-ThemeColor $textEditorCat "Current Statement" "FF2E3A1F" "FFE6E8ED"
-Set-ThemeColor $textEditorCat "Syntax Error" $null "FFE5484D"
-Set-ThemeColor $textEditorCat "Compiler Error" $null "FFE5484D"
-Set-ThemeColor $textEditorCat "Warning" $null "FFE09F3E"
+Set-ThemeColor $textEditorCat "Breakpoint (Enabled)" "FF3B1D22" "FFE6EAF0"
+Set-ThemeColor $textEditorCat "Current Statement" "FF1E382B" "FFE6EAF0"
+Set-ThemeColor $textEditorCat "Syntax Error" $null "FFFF626B"
+Set-ThemeColor $textEditorCat "Compiler Error" $null "FFFF626B"
+Set-ThemeColor $textEditorCat "Warning" $null "FFE8B84A"
 
 # 3. Roslyn Text Editor MEF Items Category
 $roslynCat = Get-OrCreateCategory $themeElement "Roslyn Text Editor MEF Items" "{75a05685-00a8-4ded-bae5-e7a50bfa929a}"
 Set-ThemeColor $roslynCat "keyword" $null "FF4D8DCC"
 Set-ThemeColor $roslynCat "keyword - control" $null "FF5EA1E6"
-Set-ThemeColor $roslynCat "class name" $null "FF4EC9B0"
-Set-ThemeColor $roslynCat "struct name" $null "FF4EC9B0"
-Set-ThemeColor $roslynCat "interface name" $null "FF52BAA7"
-Set-ThemeColor $roslynCat "enum name" $null "FF4EC9B0"
-Set-ThemeColor $roslynCat "delegate name" $null "FF4EC9B0"
-Set-ThemeColor $roslynCat "type parameter name" $null "FF80D4C5"
+Set-ThemeColor $roslynCat "class name" $null "FF42D9D0"
+Set-ThemeColor $roslynCat "struct name" $null "FF42D9D0"
+Set-ThemeColor $roslynCat "interface name" $null "FF52E3DA"
+Set-ThemeColor $roslynCat "enum name" $null "FF42D9D0"
+Set-ThemeColor $roslynCat "delegate name" $null "FF42D9D0"
+Set-ThemeColor $roslynCat "type parameter name" $null "FF80E8DE"
 Set-ThemeColor $roslynCat "method name" $null "FF61AFEF"
 Set-ThemeColor $roslynCat "extension method name" $null "FF72C0F5"
-Set-ThemeColor $roslynCat "string - verbatim" $null "FFE8B84A"
+Set-ThemeColor $roslynCat "string - verbatim" $null "FFE7B45A"
 Set-ThemeColor $roslynCat "string - escape character" $null "FFE09F3E"
 Set-ThemeColor $roslynCat "number" $null "FFC678DD"
 Set-ThemeColor $roslynCat "constant name" $null "FFE09F3E"
@@ -593,34 +593,34 @@ Set-ThemeColor $roslynCat "enum member name" $null "FFE09F3E"
 Set-ThemeColor $roslynCat "namespace name" $null "FF7998B4"
 Set-ThemeColor $roslynCat "property name" $null "FFD1D9E0"
 Set-ThemeColor $roslynCat "field name" $null "FFD1D9E0"
-Set-ThemeColor $roslynCat "local name" $null "FFE6E8ED"
+Set-ThemeColor $roslynCat "local name" $null "FFE6EAF0"
 Set-ThemeColor $roslynCat "parameter name" $null "FF9CDCFE"
-Set-ThemeColor $roslynCat "operator" $null "FFE6E8ED"
-Set-ThemeColor $roslynCat "punctuation" $null "FFE6E8ED"
-Set-ThemeColor $roslynCat "xml doc comment - delimiter" $null "FF62727B"
-Set-ThemeColor $roslynCat "xml doc comment - text" $null "FF62727B"
+Set-ThemeColor $roslynCat "operator" $null "FFE6EAF0"
+Set-ThemeColor $roslynCat "punctuation" $null "FFE6EAF0"
+Set-ThemeColor $roslynCat "xml doc comment - delimiter" $null "FF7F9B8A"
+Set-ThemeColor $roslynCat "xml doc comment - text" $null "FF7F9B8A"
 Set-ThemeColor $roslynCat "xml doc comment - name" $null "FF5C82A6"
-Set-ThemeColor $roslynCat "xml doc comment - attribute name" $null "FF56B6C2"
-Set-ThemeColor $roslynCat "xml doc comment - attribute value" $null "FFE8B84A"
+Set-ThemeColor $roslynCat "xml doc comment - attribute name" $null "FF42D9D0"
+Set-ThemeColor $roslynCat "xml doc comment - attribute value" $null "FFE7B45A"
 
 # 4. Statement Completion Category
 $stmtCompCat = Get-OrCreateCategory $themeElement "Statement Completion" "{C1614BB1-734F-4A31-BD42-5AE6275E16D2}"
-Set-ThemeColor $stmtCompCat "Plain Text" "FF191D24" "FFE6E8ED"
-Set-ThemeColor $stmtCompCat "Selected Text" "FF1B385C" "FFE6E8ED"
+Set-ThemeColor $stmtCompCat "Plain Text" "FF171C25" "FFE6EAF0"
+Set-ThemeColor $stmtCompCat "Selected Text" "FF1B385C" "FFE6EAF0"
 
 # 5. ToolTips Category
 $tooltipsCat = Get-OrCreateCategory $themeElement "Editor Tooltip" "{A9A5637F-B2A8-422E-8FB5-DFB4625F0111}"
-Set-ThemeColor $tooltipsCat "Plain Text" "FF191D24" "FFE6E8ED"
+Set-ThemeColor $tooltipsCat "Plain Text" "FF171C25" "FFE6EAF0"
 
 # 6. Find Results Category
 $findResCat = Get-OrCreateCategory $themeElement "Find Results" "{5C48B2CB-0366-4FBF-9786-0BB37E945687}"
-Set-ThemeColor $findResCat "Plain Text" "FF101216" "FFE6E8ED"
-Set-ThemeColor $findResCat "Selected Text" "FF1B385C" "FFE6E8ED"
+Set-ThemeColor $findResCat "Plain Text" "FF101216" "FFE6EAF0"
+Set-ThemeColor $findResCat "Selected Text" "FF1B385C" "FFE6EAF0"
 
 # 7. Output Window Category
 $outputCat = Get-OrCreateCategory $themeElement "Output Window" "{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}"
-Set-ThemeColor $outputCat "Plain Text" "FF101216" "FFE6E8ED"
-Set-ThemeColor $outputCat "Selected Text" "FF1B385C" "FFE6E8ED"
+Set-ThemeColor $outputCat "Plain Text" "FF101216" "FFE6EAF0"
+Set-ThemeColor $outputCat "Selected Text" "FF1B385C" "FFE6EAF0"
 
 # Save customized vstheme XML
 $finalVsthemePath = "src\DarkKnightTheme\DarkKnight.vstheme"

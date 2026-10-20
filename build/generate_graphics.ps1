@@ -216,24 +216,25 @@ function Generate-IdePreviewScreenshot([string]$outPath, [string]$titleText, [st
     $g.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::ClearTypeGridFit
 
     $cMainBg = [System.Drawing.ColorTranslator]::FromHtml("#101216")
-    $cSurface = [System.Drawing.ColorTranslator]::FromHtml("#191D24")
-    $cHeader = [System.Drawing.ColorTranslator]::FromHtml("#14171E")
-    $cBorder = [System.Drawing.ColorTranslator]::FromHtml("#232833")
+    $cSurface = [System.Drawing.ColorTranslator]::FromHtml("#171C25")
+    $cHeader = [System.Drawing.ColorTranslator]::FromHtml("#1C2330")
+    $cBorder = [System.Drawing.ColorTranslator]::FromHtml("#1C2330")
     $cGold = [System.Drawing.ColorTranslator]::FromHtml("#E8B84A")
     $cGothamBlue = [System.Drawing.ColorTranslator]::FromHtml("#4D8DCC")
-    $cCyan = [System.Drawing.ColorTranslator]::FromHtml("#4EC9B0")
-    $cMint = [System.Drawing.ColorTranslator]::FromHtml("#52BAA7")
+    $cCyan = [System.Drawing.ColorTranslator]::FromHtml("#42D9D0")
+    $cMint = [System.Drawing.ColorTranslator]::FromHtml("#52E3DA")
     $cSoftBlue = [System.Drawing.ColorTranslator]::FromHtml("#61AFEF")
     $cLavender = [System.Drawing.ColorTranslator]::FromHtml("#C678DD")
-    $cGreenGray = [System.Drawing.ColorTranslator]::FromHtml("#62727B")
-    $cTextPrimary = [System.Drawing.ColorTranslator]::FromHtml("#E6E8ED")
+    $cGreenGray = [System.Drawing.ColorTranslator]::FromHtml("#7F9B8A")
+    $cTextPrimary = [System.Drawing.ColorTranslator]::FromHtml("#E6EAF0")
     $cTextSecondary = [System.Drawing.ColorTranslator]::FromHtml("#929BA8")
     $cLineNum = [System.Drawing.ColorTranslator]::FromHtml("#4E5766")
     $cSelection = [System.Drawing.ColorTranslator]::FromHtml("#1B385C")
-    $cActiveLine = [System.Drawing.ColorTranslator]::FromHtml("#161A22")
-    $cRed = [System.Drawing.ColorTranslator]::FromHtml("#E5484D")
-    $cAmber = [System.Drawing.ColorTranslator]::FromHtml("#E09F3E")
+    $cActiveLine = [System.Drawing.ColorTranslator]::FromHtml("#161B23")
+    $cRed = [System.Drawing.ColorTranslator]::FromHtml("#FF626B")
+    $cAmber = [System.Drawing.ColorTranslator]::FromHtml("#E8B84A")
     $cDebugBar = [System.Drawing.ColorTranslator]::FromHtml("#1A365D")
+    $cString = [System.Drawing.ColorTranslator]::FromHtml("#E7B45A")
 
     $fontCode = [System.Drawing.Font]::new("Consolas", [float]11.5, [System.Drawing.FontStyle]::Regular)
     $fontCodeBold = [System.Drawing.Font]::new("Consolas", [float]11.5, [System.Drawing.FontStyle]::Bold)
@@ -529,3 +530,67 @@ Generate-IdePreviewScreenshot "$screenDir\05_error_list_output.png" "Error List 
 Copy-Item "$screenDir\01_editor_csharp.png" "$resDir\Preview.png" -Force
 Copy-Item "$screenDir\01_editor_csharp.png" "$assetsDir\preview_hero.png" -Force
 Write-Host "Generated Marketplace Preview: $resDir\Preview.png"
+
+# 4. Generate Marketplace Banner (1280x640)
+Write-Host "Rendering Marketplace Banner (1280x640)..."
+$bannerBmp = [System.Drawing.Bitmap]::new(1280, 640)
+$bg = [System.Drawing.Graphics]::FromImage($bannerBmp)
+$bg.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+$bg.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::ClearTypeGridFit
+
+# Background Gradient
+$rectB = [System.Drawing.Rectangle]::new(0, 0, 1280, 640)
+$brushB = [System.Drawing.Drawing2D.LinearGradientBrush]::new(
+    $rectB,
+    [System.Drawing.ColorTranslator]::FromHtml("#171C25"),
+    [System.Drawing.ColorTranslator]::FromHtml("#101216"),
+    [System.Drawing.Drawing2D.LinearGradientMode]::ForwardDiagonal
+)
+$bg.FillRectangle($brushB, $rectB)
+
+# Subtle Blueprint / Cad Grid Lines
+$penGrid = [System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(20, 77, 141, 204), 1)
+for ($x = 0; $x -lt 1280; $x += 40) { $bg.DrawLine($penGrid, $x, 0, $x, 640) }
+for ($y = 0; $y -lt 640; $y += 40) { $bg.DrawLine($penGrid, 0, $y, 1280, $y) }
+
+# Gold Top Border Accent
+$bg.FillRectangle([System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#E8B84A")), 0, 0, 1280, 4)
+
+# Draw Central Batcave Workstation Emblem
+if (Test-Path "$assetsDir\emblem.png") {
+    $emblemImg = [System.Drawing.Image]::FromFile("$assetsDir\emblem.png")
+    $bg.DrawImage($emblemImg, 80, 190, 240, 240)
+    $emblemImg.Dispose()
+}
+
+# Typography
+$fontTitle = [System.Drawing.Font]::new("Segoe UI", 42, [System.Drawing.FontStyle]::Bold)
+$fontSub = [System.Drawing.Font]::new("Segoe UI", 16, [System.Drawing.FontStyle]::Bold)
+$fontTagline = [System.Drawing.Font]::new("Segoe UI", 12, [System.Drawing.FontStyle]::Regular)
+$fontBadge = [System.Drawing.Font]::new("Segoe UI", 11, [System.Drawing.FontStyle]::Bold)
+
+$brushGold = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#E8B84A"))
+$brushBlue = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#4D8DCC"))
+$brushWhite = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#E6EAF0"))
+$brushMuted = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#929BA8"))
+
+$bg.DrawString("DARK KNIGHT", $fontTitle, $brushGold, 360, 190)
+$bg.DrawString("BATCAVE THEME FOR MICROSOFT VISUAL STUDIO 2022", $fontSub, $brushBlue, 364, 260)
+$bg.DrawString("Cinematic nocturnal aesthetic engineered for professional C# and .NET workstations.", $fontTagline, $brushWhite, 366, 305)
+
+# Badges
+$badges = @("C# & .NET Roslyn Colors", "54 VS Categories Themed", "MEF Viewport Backgrounds", "WPF Settings Panel")
+$bx = 366
+foreach ($badge in $badges) {
+    $sizeB = $bg.MeasureString($badge, $fontBadge)
+    $bRect = [System.Drawing.RectangleF]::new($bx, 360, ($sizeB.Width + 20), 32)
+    $bg.FillRectangle([System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#1C2330")), $bRect)
+    $bg.DrawRectangle([System.Drawing.Pen]::new([System.Drawing.ColorTranslator]::FromHtml("#2A3445"), 1), $bRect.X, $bRect.Y, $bRect.Width, $bRect.Height)
+    $bg.DrawString($badge, $fontBadge, $brushWhite, ($bx + 10), 366)
+    $bx += [int]($sizeB.Width + 30)
+}
+
+$bg.Dispose()
+$bannerBmp.Save("$assetsDir\marketplace_banner.png", [System.Drawing.Imaging.ImageFormat]::Png)
+$bannerBmp.Dispose()
+Write-Host "Generated Marketplace Banner: $assetsDir\marketplace_banner.png"

@@ -2,6 +2,11 @@
 
 This document details the internal architecture, Microsoft Visual Studio Extensibility SDK integration, and package definition mechanics used to build **Dark Knight — Gotham Dark Theme for Visual Studio**.
 
+The project delivers a hybrid extensibility package combining:
+1. **Core Visual Studio Theme Subsystem:** Native `.vstheme` XML and pre-compiled `.pkgdef` binary color stream targeting the VS shell and Roslyn semantic classifier.
+2. **Editor Background Watermark Subsystem:** WPF-based MEF editor extension rendering non-intrusive viewport watermarks behind text and selection.
+3. **Settings & Configuration Subsystem:** WPF options page (`UIElementDialogPage`) and tool window pane (`ToolWindowPane`) for real-time background customization.
+
 ---
 
 ## 1. Architectural Overview
@@ -15,17 +20,34 @@ Visual Studio's theming pipeline differs significantly from text-editor-only sys
            │          │
            │          └──> VsixColorCompiler.exe (VS 2022 VSSDK)
            │                     │
-           └──> DarkKnight.pkgdef (Binary-encoded registry definition)
+           ├──> DarkKnight.pkgdef (Binary-encoded theme registry stream)
+           │
+[MEF Editor Background & Settings Subsystem]
+           │
+           ├──> DarkKnightBackgroundCreationListener (IWpfTextViewCreationListener)
+           │          │
+           │          └──> DarkKnightBackgroundAdornment (IAdornmentLayer)
+           │                     │  [Z-Order: Before = PredefinedAdornmentLayers.Text]
+           │                     │  [IsHitTestVisible = false]
+           │                     └──> Dual Layer: Viewport Image + Dark Tint Overlay (#101216)
+           │
+           ├──> DarkKnightSettings (Singleton Model, LocalAppData JSON persistence)
+           │          │
+           │          ├──> DarkKnightSettingsControl (WPF UI with Preset Picker & Sliders)
+           │          │          │
+           │          │          ├──> DarkKnightSettingsPage (Tools > Options DialogPage)
+           │          │          └──> DarkKnightSettingsToolWindow (View > Other Windows)
+           │          └──> DarkKnightPackage (AsyncPackage Registration)
+           │
+           └──> MSBuild + CreatePkgDef.exe
                       │
-                      └──> VsixUtil.exe / MSBuild
+                      └──> DarkKnightTheme.vsix
                                  │
-                                 └──> DarkKnightTheme.vsix
-                                            │
-               ┌────────────────────────────┴────────────────────────────┐
-               ▼                                                         ▼
-    [Visual Studio Registry Hive]                             [MEF / Roslyn Classifier]
-    [$RootKey$\Themes\{c86dec58-...}]                        Fonts & Colors Classification
-    FallbackId = {1ded0138-47ce-435e-84ef-9ec1f439b749}      (C#, SQL, XML, HTML, JSON)
+           ┌─────────────────────┴─────────────────────┐
+           ▼                                           ▼
+[Visual Studio Theme Registry]               [MEF Component Catalog]
+$RootKey$\Themes\{c86dec58-...}              AdornmentLayerDefinition
+FallbackId = {1ded0138-47ce-...}             DarkKnightBackgroundCreationListener
 ```
 
 ---
@@ -36,14 +58,16 @@ Visual Studio's theming pipeline differs significantly from text-editor-only sys
 The `.vstheme` file is the master XML definition containing categories, tokens, foreground/background definitions, and color types (`CT_RAW` with `AARRGGBB` hex encoding).
 
 Key attributes:
-- `Name="Dark Knight"`: The display name populated in Visual Studio's theme selection interfaces.
+- `Name="Dark Knight"`: The display name populated in Visual Studio's theme selection interfaces (**Tools > Theme > Dark Knight**).
 - `GUID="{c86dec58-e31f-483a-af04-90c711aa3ba5}"`: The unique theme identifier.
 - `FallbackId="{1ded0138-47ce-435e-84ef-9ec1f439b749}"`: Points directly to the built-in **Visual Studio Dark Theme**. Any token not explicitly styled by Dark Knight automatically inherits from Visual Studio's Dark theme, guaranteeing 100% stability, zero unreadable text in third-party extensions, and no missing UI resources.
 
-### 2.2 The `.pkgdef` Registry Package
-Visual Studio does not parse raw XML at runtime for shell performance. Instead, theme files are compiled into `.pkgdef` format using `VsixColorCompiler.exe`.
+### 2.2 The `.pkgdef` Registry Packages
+Visual Studio does not parse raw XML at runtime for shell performance. Instead:
+- Theme files are compiled into `.pkgdef` format using `VsixColorCompiler.exe`.
+- Extension package attributes are compiled into `DarkKnightTheme.pkgdef` using `CreatePkgDef.exe`.
 
-Inside the `.pkgdef`, colors are encoded into binary `Data=hex:...` streams under their category subkeys:
+Inside `DarkKnight.pkgdef`, colors are encoded into binary `Data=hex:...` streams under their category subkeys:
 ```ini
 [$RootKey$\Themes\{c86dec58-e31f-483a-af04-90c711aa3ba5}]
 @="Dark Knight"
@@ -52,21 +76,71 @@ Inside the `.pkgdef`, colors are encoded into binary `Data=hex:...` streams unde
 
 [$RootKey$\Themes\{c86dec58-e31f-483a-af04-90c711aa3ba5}\Environment]
 "Data"=hex:e9,38,00,00,0b,...
+```
 
-[$RootKey$\Themes\{c86dec58-e31f-483a-af04-90c711aa3ba5}\Roslyn Text Editor MEF Items]
-"Data"=hex:4d,05,00,00,0b,...
+Inside `DarkKnightTheme.pkgdef`, package and settings registrations are declared:
+```ini
+[$RootKey$\ToolsOptionsPages\Dark Knight Theme\Batcave Background]
+"Package"="{e87f2b1a-9653-4dc9-9817-21a48c9df17b}"
+"Page"="{6e927c3f-df43-4b47-b845-6435c24b611e}"
+
+[$RootKey$\ToolWindows\{476b7e0d-136b-4e11-94df-658a5da1f11c}]
+@="{e87f2b1a-9653-4dc9-9817-21a48c9df17b}"
+"Name"="DarkKnightTheme.UI.DarkKnightSettingsToolWindow"
 ```
 
 ### 2.3 `source.extension.vsixmanifest`
 The extension manifest declares the extension identity, installation target, and assets:
 - **Target:** Visual Studio 2022 (`[17.0, 18.0)`) with `ProductArchitecture = amd64`.
 - **Assets:**
-  - `Microsoft.VisualStudio.VsPackage`: Points to `DarkKnight.pkgdef`. This instructs Visual Studio's VSIX installer and runtime shell to merge the theme definitions into the IDE's configuration hive.
+  - `Microsoft.VisualStudio.VsPackage`: Points to `DarkKnight.pkgdef` (Theme registry).
+  - `Microsoft.VisualStudio.VsPackage`: Points to `DarkKnightTheme.pkgdef` (Package & Settings registry).
   - `Microsoft.VisualStudio.ColorTheme`: Points to `DarkKnight.vstheme`.
+  - `Microsoft.VisualStudio.MefComponent`: Points to `DarkKnightTheme.dll` (MEF background layer).
 
 ---
 
-## 3. Categories Covered
+## 3. Editor Background Subsystem Architecture
+
+The background watermark implementation is engineered strictly using official Visual Studio MEF extensibility APIs, avoiding dangerous hook libraries or unstable low-level Win32 window-subclassing hacks.
+
+### 3.1 Non-Intrusive Z-Ordering (`Before = PredefinedAdornmentLayers.Text`)
+```csharp
+[Export(typeof(AdornmentLayerDefinition))]
+[Name(LayerName)]
+[Order(Before = PredefinedAdornmentLayers.Text)]
+[TextViewRole(PredefinedTextViewRoles.Document)]
+internal static AdornmentLayerDefinition LayerDefinition;
+```
+By placing the adornment layer physically before `PredefinedAdornmentLayers.Text` in the WPF visual tree:
+- Text characters, syntax tokens, and glyphs render on top.
+- Selection geometry and word highlights render on top.
+- Squiggles, breakpoints, margin glyphs, and IntelliSense popups render completely unobstructed.
+
+### 3.2 Viewport Tracking & Hit-Test Transparency
+In `DarkKnightBackgroundAdornment`:
+- The container `Grid`, watermark `Image`, and tint `Rectangle` have `IsHitTestVisible = false`.
+- The editor receives 100% of mouse and keyboard events (caret clicks, drag-to-select, breakpoint toggles, context menus).
+- In `_textView.LayoutChanged` and viewport size events, the container coordinates are synced to `_textView.ViewportLeft` and `_textView.ViewportTop`, locking the watermark to the visible window frame without jitter.
+
+### 3.3 Dual-Layer Contrast Shield
+- The watermark image has adjustable opacity (default `0.08`, max `0.35`).
+- A dark translucent overlay rectangle (`#101216`) sits directly above the image with adjustable opacity (default `0.70`).
+- This guarantees that even detailed architectural schematics never interfere with code readability.
+
+---
+
+## 4. Settings & Real-Time Sync Subsystem
+
+- **Model:** `DarkKnightSettings` manages persistence via `DataContractJsonSerializer` to `%LocalAppData%\Microsoft\VisualStudio\DarkKnight\settings.json`.
+- **Event Bus:** `DarkKnightSettings.SettingsChanged` alerts all active `IWpfTextView` instances to re-render in real-time without requiring IDE restart.
+- **UI Hosts:**
+  1. **Options Page:** `DarkKnightSettingsPage` inherits `UIElementDialogPage` to embed the WPF settings control directly into **Tools > Options > Dark Knight Theme > Batcave Background**.
+  2. **Tool Window:** `DarkKnightSettingsToolWindow` provides a dockable panel accessible under **View > Other Windows > Dark Knight — Batcave Background Settings**.
+
+---
+
+## 5. Visual Studio Categories Covered
 
 The Dark Knight theme defines explicit styling across **54 Visual Studio Categories**, including:
 
@@ -84,11 +158,3 @@ The Dark Knight theme defines explicit styling across **54 Visual Studio Categor
 12. **TeamExplorer & VersionControl:** Git Changes, commit interface, branch manager, diff colors.
 13. **Statement Completion & Editor Tooltip:** IntelliSense completion list, signature help, parameter info, Quick Info tooltips.
 14. **CodeSenseControls (CodeLens):** Reference counts, author indicators, test status.
-
----
-
-## 4. Known Limitations & Visual Studio Platform Constraints
-
-1. **Legacy Win32 Dialogs:** Visual Studio includes occasional legacy Win32 modal dialogs (e.g. some native COM file pickers or third-party extension dialogs) that render using standard Windows OS control brushes rather than Visual Studio's WPF theming engine.
-2. **Third-Party Extensions:** Extensions that hardcode WPF colors instead of binding to `VsBrushes.*` or `ThemeResourceExtension` may not reflect the Dark Knight theme palette.
-3. **User Font and Color Overrides:** If a user has previously customized individual token colors in **Tools > Options > Environment > Fonts and Colors**, Visual Studio treats those user customizations as high-priority overrides over theme defaults. To view the theme's pure defaults, click **Use Defaults** in the Fonts and Colors options dialog.

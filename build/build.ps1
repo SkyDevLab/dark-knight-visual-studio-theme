@@ -37,10 +37,11 @@ if (-not (Test-Path $colorCompiler)) {
 }
 Write-Host "Found VSSDK Color Compiler: $colorCompiler" -ForegroundColor Green
 
-# 2. Build Graphics
+# 2. Build Graphics & Backgrounds
 if (-not $SkipGraphics) {
     Write-Host ""
-    Write-Host "--- Step 1: Generating Branding Graphics and Previews ---" -ForegroundColor Cyan
+    Write-Host "--- Step 1: Generating Branding Graphics, Backgrounds and Previews ---" -ForegroundColor Cyan
+    & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptDir "generate_backgrounds.ps1")
     & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptDir "generate_graphics.ps1")
 }
 
