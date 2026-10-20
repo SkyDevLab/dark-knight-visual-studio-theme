@@ -1,0 +1,11 @@
+# Visual Studio build artifacts
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Keep dist vsix
+!dist/
+!dist/*.vsix

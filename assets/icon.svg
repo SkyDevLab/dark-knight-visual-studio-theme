@@ -1,0 +1,70 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191D24" />
+      <stop offset="100%" stop-color="#101216" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D061" />
+      <stop offset="100%" stop-color="#C69B37" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6DB3F2" />
+      <stop offset="100%" stop-color="#3A6F9E" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect x="8" y="8" width="240" height="240" rx="36" fill="url(#bgGrad)" stroke="#232833" stroke-width="4"/>
+  <rect x="16" y="16" width="224" height="224" rx="28" fill="none" stroke="#2A313D" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Batcave Workstation Crest (Original Geometric Design) -->
+  <g filter="url(#shadow)">
+    <!-- Outer Wing Framing / Code Bracket Silhouettes -->
+    <path d="M 36 90 
+             Q 80 84 108 116 
+             Q 120 72 128 52 
+             Q 136 72 148 116 
+             Q 176 84 220 90 
+             Q 196 142 168 160 
+             Q 180 192 128 214 
+             Q 76 192 88 160 
+             Q 60 142 36 90 Z" 
+          fill="#14171E" stroke="url(#goldGrad)" stroke-width="3" />
+
+    <!-- Inner Batman Gold Angular Core Accent -->
+    <path d="M 52 102 
+             Q 86 98 112 124 
+             L 122 88 
+             L 128 72 
+             L 134 88 
+             L 144 124 
+             Q 170 98 204 102 
+             Q 186 140 162 152 
+             Q 166 178 128 196 
+             Q 90 178 94 152 
+             Q 70 140 52 102 Z" 
+          fill="#191D24" stroke="url(#goldGrad)" stroke-width="2"/>
+
+    <!-- Central Bat Terminal Emblem: Angular Bat Head & Code Bracket Motif -->
+    <!-- Bat Ears & Forehead -->
+    <polygon points="120,96 123,76 126,94 130,94 133,76 136,96 128,102" fill="url(#goldGrad)"/>
+
+    <!-- Left Wing Terminal Chevron < -->
+    <polyline points="96,120 78,136 96,152" fill="none" stroke="#4D8DCC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right Wing Terminal Chevron > -->
+    <polyline points="160,120 178,136 160,152" fill="none" stroke="#4D8DCC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Bat Slash / Core Terminal Prompt -->
+    <line x1="124" y1="156" x2="132" y2="120" stroke="#E8B84A" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Accent Bottom Status Indicator -->
+  <circle cx="128" cy="228" r="3.5" fill="#E8B84A"/>
+  <circle cx="114" cy="228" r="2.5" fill="#4D8DCC" opacity="0.8"/>
+  <circle cx="142" cy="228" r="2.5" fill="#4D8DCC" opacity="0.8"/>
+</svg>

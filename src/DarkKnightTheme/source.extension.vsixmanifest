@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="DarkKnightTheme.GothamDark" Version="1.0.0" Language="en-US" Publisher="Gotham Extensibility" />
+    <DisplayName>Dark Knight — Gotham Dark Theme for Visual Studio</DisplayName>
+    <Description>A premium, cinematic Batman-inspired dark theme for the full Microsoft Visual Studio IDE, featuring a sophisticated Batcave workstation aesthetic optimized for professional C# and .NET development.</Description>
+    <MoreInfo>https://github.com/gotham-extensibility/dark-knight-vs</MoreInfo>
+    <License>LICENSE.txt</License>
+    <Icon>Resources\Icon.png</Icon>
+    <PreviewImage>Resources\Preview.png</PreviewImage>
+    <Tags>theme;dark;batman;batcave;dark knight;gotham;csharp;dotnet;visual studio 2022</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.7.2,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0, 18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="DarkKnight.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.ColorTheme" Path="DarkKnight.vstheme" />
+  </Assets>
+</PackageManifest>
