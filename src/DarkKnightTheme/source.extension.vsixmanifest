@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="DarkKnightTheme.GothamDark" Version="1.2.0" Language="en-US" Publisher="Gotham Extensibility" />
+    <Identity Id="DarkKnightTheme.GothamDark" Version="1.2.0" Language="en-US" Publisher="SuryaPratapSingh" />
     <DisplayName>Dark Knight - Gotham Dark Theme for Visual Studio</DisplayName>
     <Description>A premium, cinematic Batman-inspired dark theme for Microsoft Visual Studio 2022 with Batcave workstation aesthetics, professional C#/.NET syntax highlighting, and an optional non-intrusive viewport background system.</Description>
     <MoreInfo>https://github.com/SkyDevLab/dark-knight-visual-studio-theme</MoreInfo>

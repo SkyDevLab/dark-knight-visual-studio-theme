@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DarkKnightTheme")]
 [assembly: AssemblyDescription("Dark Knight — Gotham Dark Theme for Visual Studio")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Gotham Extensibility")]
+[assembly: AssemblyCompany("Surya Pratap Singh")]
 [assembly: AssemblyProduct("Dark Knight Theme")]
-[assembly: AssemblyCopyright("Copyright © 2026 Gotham Extensibility")]
+[assembly: AssemblyCopyright("Copyright © 2026 Surya Pratap Singh")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

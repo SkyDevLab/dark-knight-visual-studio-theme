@@ -36,15 +36,11 @@ Before uploading, ensure the Publisher in the VSIX manifest matches your registe
 1. Open `src/DarkKnightTheme/source.extension.vsixmanifest`.
 2. Locate line 4:
    ```xml
-   <Identity Id="DarkKnightTheme.GothamDark" Version="1.2.0" Language="en-US" Publisher="Gotham Extensibility" />
+   <Identity Id="DarkKnightTheme.GothamDark" Version="1.2.0" Language="en-US" Publisher="SuryaPratapSingh" />
    ```
-3. If your Publisher ID on the Marketplace portal is different (for example `SkyDevLab`):
-   - Change `Publisher="Gotham Extensibility"` to `Publisher="SkyDevLab"`.
-   - Rebuild the package by running:
-     ```powershell
-     .\build\build.ps1 -SkipGraphics
-     ```
-   - This re-packages `dist/DarkKnightTheme.vsix` with your exact publisher ID.
+3. Verified matching your registered Marketplace Publisher:
+   - **Publisher ID:** `SuryaPratapSingh`
+   - **Publisher Name:** `Surya Pratap Singh`
 
 ---
 
