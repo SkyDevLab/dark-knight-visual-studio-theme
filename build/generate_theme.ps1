@@ -568,11 +568,21 @@ Set-ThemeColor $envCat "StatusBarBorder" "FF69552B" $null
 # Tool Windows & Golden Panel Borders
 Set-ThemeColor $envCat "ToolWindowBackground" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $envCat "ToolWindowBorder" "FF69552B" $null
-Set-ThemeColor $envCat "ToolWindowText" $null "FFE6EAF0"
-Set-ThemeColor $envCat "WindowText" $null "FFE6EAF0"
-Set-ThemeColor $envCat "ControlText" $null "FFE6EAF0"
-Set-ThemeColor $envCat "ControlLightText" $null "FFE6EAF0"
-Set-ThemeColor $envCat "ControlDarkText" $null "FF929BA8"
+Set-ThemeColor $envCat "ToolWindowText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "WindowText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ControlText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ControlLightText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ControlDarkText" "FF929BA8" "FF929BA8"
+Set-ThemeColor $envCat "PanelText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "SideBarText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "CaptionText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "HighlightText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "InfoText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "MenuText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ButtonText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ComboBoxText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ComboBoxItemText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "DropDownText" "FFE6EAF0" "FFE6EAF0"
 Set-ThemeColor $envCat "PanelTitle" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $envCat "PanelTitleActive" "FF1C2330" "FFFFC94A"
 Set-ThemeColor $envCat "PanelBorder" "FF69552B" $null
@@ -581,10 +591,10 @@ Set-ThemeColor $envCat "PanelSubGroupSeparator" "FF69552B" $null
 Set-ThemeColor $envCat "ToolWindowTabBorder" "FF69552B" $null
 Set-ThemeColor $envCat "ToolWindowTabSeparator" "FF69552B" $null
 Set-ThemeColor $envCat "ToolWindowTabSelectedTab" "FF171C25" "FFE6EAF0"
-Set-ThemeColor $envCat "ToolWindowTabSelectedActiveText" $null "FFE6EAF0"
-Set-ThemeColor $envCat "ToolWindowTabSelectedText" $null "FFE6EAF0"
-Set-ThemeColor $envCat "ToolWindowTabText" $null "FF929BA8"
-Set-ThemeColor $envCat "ToolWindowTabMouseOverText" $null "FFFFC94A"
+Set-ThemeColor $envCat "ToolWindowTabSelectedActiveText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ToolWindowTabSelectedText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $envCat "ToolWindowTabText" "FF929BA8" "FF929BA8"
+Set-ThemeColor $envCat "ToolWindowTabMouseOverText" "FFFFC94A" "FFFFC94A"
 Set-ThemeColor $envCat "ToolWindowTabSelectedBorder" "FFFFC94A" $null
 Set-ThemeColor $envCat "ToolWindowTabMouseOverBorder" "FFE8B84A" $null
 Set-ThemeColor $envCat "ToolWindowFloatingFrame" "FFE8B84A" $null
@@ -698,11 +708,11 @@ Set-ThemeColor $commonDocCat "InnerTabSelectedIndicator" "FFFFC94A" $null
 Set-ThemeColor $commonDocCat "ListItemBorderFocused" "FFFFC94A" $null
 Set-ThemeColor $commonDocCat "ListItemBorderSelected" "FFE8B84A" $null
 Set-ThemeColor $commonDocCat "ListItemBorderHover" "FF69552B" $null
-Set-ThemeColor $commonDocCat "ListItemText" $null "FFE6EAF0"
-Set-ThemeColor $commonDocCat "ListItemTextFocused" $null "FFE6EAF0"
-Set-ThemeColor $commonDocCat "ListItemTextSelected" $null "FFE6EAF0"
-Set-ThemeColor $commonDocCat "ListItemTextHover" $null "FFE6EAF0"
-Set-ThemeColor $commonDocCat "ListItemTextUnfocused" $null "FFE6EAF0"
+Set-ThemeColor $commonDocCat "ListItemText" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $commonDocCat "ListItemTextFocused" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $commonDocCat "ListItemTextSelected" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $commonDocCat "ListItemTextHover" "FFE6EAF0" "FFE6EAF0"
+Set-ThemeColor $commonDocCat "ListItemTextUnfocused" "FFE6EAF0" "FFE6EAF0"
 
 # -------------------------------------------------------------
 # 6. TreeView Category ({92ecf08e-8b13-4cf4-99e9-ae2692382185})
@@ -711,11 +721,11 @@ $treeViewCat = Get-OrCreateCategory $themeElement "TreeView" "{92ecf08e-8b13-4cf
 Set-ThemeColor $treeViewCat "Background" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $treeViewCat "SelectedItemActive" "FF1B385C" "FFE6EAF0"
 Set-ThemeColor $treeViewCat "SelectedItemInactive" "FF162C46" "FFE6EAF0"
-Set-ThemeColor $treeViewCat "SelectedItemActiveGlyph" $null "FFFFC94A"
-Set-ThemeColor $treeViewCat "Glyph" $null "FF929BA8"
-Set-ThemeColor $treeViewCat "FocusVisualBorder" $null "FFFFC94A"
-Set-ThemeColor $treeViewCat "DragOverItem" "FFE8B84A" $null
-Set-ThemeColor $treeViewCat "HighlightedSpan" $null "FFFFC94A"
+Set-ThemeColor $treeViewCat "SelectedItemActiveGlyph" "FFFFC94A" "FFFFC94A"
+Set-ThemeColor $treeViewCat "Glyph" "FF929BA8" "FF929BA8"
+Set-ThemeColor $treeViewCat "FocusVisualBorder" "FFFFC94A" "FFFFC94A"
+Set-ThemeColor $treeViewCat "DragOverItem" "FFE8B84A" "FFE6EAF0"
+Set-ThemeColor $treeViewCat "HighlightedSpan" "FF1B385C" "FFFFC94A"
 
 # -------------------------------------------------------------
 # 7. Statement Completion Category

@@ -802,12 +802,14 @@
       </Color>
       <Color Name="HighlightText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ButtonFace">
         <Background Type="CT_RAW" Source="FF162C46" />
       </Color>
       <Color Name="ButtonText">
-        <Background Type="CT_RAW" Source="FF929BA8" />
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ButtonHighlight">
         <Background Type="CT_RAW" Source="FF4D8DCC" />
@@ -1181,6 +1183,7 @@
       </Color>
       <Color Name="DropDownText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ComboBoxBorder">
         <Background Type="CT_RAW" Source="FF69552B" />
@@ -1347,7 +1350,7 @@
         <Background Type="CT_RAW" Source="FF69552B" />
       </Color>
       <Color Name="ToolWindowTabMouseOverText">
-        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Background Type="CT_RAW" Source="FFFFC94A" />
         <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
       <Color Name="ToolWindowTabSelectedActiveText">
@@ -1409,13 +1412,44 @@
         <Background Type="CT_RAW" Source="FF69552B" />
       </Color>
       <Color Name="ControlText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
         <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ControlLightText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
         <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ControlDarkText">
+        <Background Type="CT_RAW" Source="FF929BA8" />
         <Foreground Type="CT_RAW" Source="FF929BA8" />
+      </Color>
+      <Color Name="PanelText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="SideBarText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="CaptionText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="InfoText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="MenuText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="ComboBoxText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="ComboBoxItemText">
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="PanelTitle">
         <Background Type="CT_RAW" Source="FF171C25" />
@@ -2211,7 +2245,7 @@
         <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="Glyph">
-        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Background Type="CT_RAW" Source="FF929BA8" />
         <Foreground Type="CT_RAW" Source="FF929BA8" />
       </Color>
       <Color Name="HighlightedSpan">
@@ -2223,7 +2257,7 @@
         <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="SelectedItemActiveGlyph">
-        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Background Type="CT_RAW" Source="FFFFC94A" />
         <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
       <Color Name="SelectedItemActiveGlyphMouseOver">
@@ -2240,6 +2274,7 @@
         <Background Type="CT_RAW" Source="FF929BA8" />
       </Color>
       <Color Name="FocusVisualBorder">
+        <Background Type="CT_RAW" Source="FFFFC94A" />
         <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
     </Category>
