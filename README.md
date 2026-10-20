@@ -1,7 +1,7 @@
 # Dark Knight — Gotham Dark Theme for Visual Studio
 
 <p align="center">
-  <img src="assets/icon_256.png" alt="Dark Knight Theme Icon" width="128" height="128" />
+  <img src="https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/icon_256.png" alt="Dark Knight Theme Icon" width="128" height="128" />
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Visual_Studio-2022_v17.0+-5C2D91?style=flat&logo=visualstudio&logoColor=white" alt="Visual Studio 2022" />
   <img src="https://img.shields.io/badge/.NET_Framework-4.7.2+-512BD4?style=flat&logo=dotnet&logoColor=white" alt=".NET 4.7.2" />
   <img src="https://img.shields.io/badge/Architecture-x64_amd64-blue?style=flat" alt="x64" />
-  <img src="https://img.shields.io/badge/Package-VSIX-informational?style=flat" alt="VSIX" />
+  <img src="https://img.shields.io/badge/Package-VSIX_v1.2.0-informational?style=flat" alt="VSIX" />
   <img src="https://img.shields.io/badge/License-MIT-gold?style=flat" alt="MIT License" />
 </p>
 
@@ -36,26 +36,26 @@ This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the of
 
 ## Marketplace Banner & Showcase
 
-![Dark Knight Marketplace Banner](assets/marketplace_banner.png)
+![Dark Knight Marketplace Banner](https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/marketplace_banner.png)
 
 ### 1. Code Editor & Professional C# Syntax with Gold Tab Accent
-![C# Code Editor Preview](assets/screenshots/01_editor_csharp.png)
+![C# Code Editor Preview](https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/screenshots/01_editor_csharp.png)
 *High-contrast C# 12 / .NET code editor: Active document tab with a bright gold accent bar (`#FFC94A`), antique gold border framing (`#69552B`), keywords in Gotham blue (`#4D8DCC`), types in syntax cyan (`#42D9D0`), methods in soft blue (`#61AFEF`), and strings in muted gold (`#E7B45A`).*
 
 ### 2. Solution Explorer & Batcave Tool Windows with Gold Borders
-![Solution Explorer & Tool Windows](assets/screenshots/02_solution_explorer_tool_windows.png)
+![Solution Explorer & Tool Windows](https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/screenshots/02_solution_explorer_tool_windows.png)
 *Unified dark framing: Thin antique gold borders (`#69552B`) outlining Solution Explorer and tool windows, distinct selection states, and gold divider accents.*
 
 ### 3. IntelliSense & Signature Help
-![IntelliSense & Signature Help](assets/screenshots/03_intellisense_signature_help.png)
+![IntelliSense & Signature Help](https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/screenshots/03_intellisense_signature_help.png)
 *IntelliSense completion lists, Quick Info tooltips, and parameter info boxes rendered with crisp contrast.*
 
 ### 4. Interactive Debugging & Breakpoints
-![Debugger & Breakpoints](assets/screenshots/04_debugger_breakpoints.png)
+![Debugger & Breakpoints](https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/screenshots/04_debugger_breakpoints.png)
 *Active execution pointer in emerald green (`#55D6A0`), breakpoint line highlight in deep burgundy (`#3B1D22`), Gotham blue status bar indicator, and Watch/Locals panels.*
 
 ### 5. Error List & Diagnostic Waves
-![Error List & Diagnostics](assets/screenshots/05_error_list_output.png)
+![Error List & Diagnostics](https://raw.githubusercontent.com/SkyDevLab/dark-knight-visual-studio-theme/master/assets/screenshots/05_error_list_output.png)
 *Accessible diagnostic colors: Clear red (`#FF626B`) for compiler errors, warm amber (`#E8B84A`) for warnings, and Gotham blue for suggestions.*
 
 ---

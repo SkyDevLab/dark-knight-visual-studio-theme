@@ -5,6 +5,9 @@
 *.suo
 *.userosscache
 *.sln.docstates
+.vs/
+*.tmp
+*.log
 
 # Keep dist vsix
 !dist/
