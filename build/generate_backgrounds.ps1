@@ -32,11 +32,14 @@ $cText = [System.Drawing.Color]::FromArgb(255, 230, 234, 240)   # #E6EAF0
 $cTextMuted = [System.Drawing.Color]::FromArgb(255, 146, 155, 168) # #929BA8
 
 # -------------------------------------------------------------
-# 1. Background 1: Batcave Mainframe (1920x1080)
-# Terminal diagnostics, holographic HUD, radar, telemetry, hex grid
+# Backgrounds check: preserve high-resolution cinematic artwork
 # -------------------------------------------------------------
-Write-Host "  -> Generating 1: Batcave Mainframe..."
-$bmp1 = [System.Drawing.Bitmap]::new(1920, 1080)
+$bg1Path = Join-Path $bgDir "batcave_mainframe.png"
+if (Test-Path $bg1Path) {
+    Write-Host "  -> High-resolution cinematic backgrounds present. Preserving background assets." -ForegroundColor Green
+} else {
+    Write-Host "  -> Generating 1: Batcave Mainframe..."
+    $bmp1 = [System.Drawing.Bitmap]::new(1920, 1080)
 $g1 = [System.Drawing.Graphics]::FromImage($bmp1)
 $g1.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
 $g1.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAlias
@@ -527,6 +530,7 @@ $thumb4.Save((Join-Path $bgDir "thumb_batmobile_techgrid.png"), [System.Drawing.
 $thumb4.Dispose()
 $g4.Dispose()
 $bmp4.Dispose()
+}
 
 # -------------------------------------------------------------
 # 5. Status Bar Icon (16x16)

@@ -53,6 +53,7 @@ namespace DarkKnightTheme.Background
             _textView.LayoutChanged += OnLayoutChanged;
             _textView.ViewportHeightChanged += OnViewportChanged;
             _textView.ViewportWidthChanged += OnViewportChanged;
+            _textView.ViewportLeftChanged += OnViewportChanged;
             _textView.Closed += OnClosed;
 
             DarkKnightSettings.SettingsChanged += OnSettingsChanged;
@@ -100,8 +101,9 @@ namespace DarkKnightTheme.Background
             double width = Math.Max(0, _textView.ViewportWidth);
             double height = Math.Max(0, _textView.ViewportHeight);
 
-            Canvas.SetLeft(_container, 0);
-            Canvas.SetTop(_container, 0);
+            // Anchor container strictly to visible viewport coordinates so it never scrolls with text
+            Canvas.SetLeft(_container, _textView.ViewportLeft);
+            Canvas.SetTop(_container, _textView.ViewportTop);
             _container.Width = width;
             _container.Height = height;
 
@@ -182,21 +184,28 @@ namespace DarkKnightTheme.Background
                 }
                 else
                 {
-                    string filename = "batcave_mainframe.png";
+                    string filename = "gotham_skyline.png";
                     switch (settings.SelectedPreset)
                     {
+                        case "BatAndCat":
+                        case "GothamMoonVigil":
+                        case "BatcaveMainframe":
+                            filename = "batcave_mainframe.png";
+                            break;
                         case "GothamSkyline":
+                        case "DarkKnightOverlook":
                             filename = "gotham_skyline.png";
                             break;
+                        case "JokerCarnival":
                         case "GargoyleVigil":
                             filename = "gargoyle_vigil.png";
                             break;
+                        case "BatSignal":
                         case "BatmobileTechGrid":
                             filename = "batmobile_techgrid.png";
                             break;
-                        case "BatcaveMainframe":
                         default:
-                            filename = "batcave_mainframe.png";
+                            filename = "gotham_skyline.png";
                             break;
                     }
 
@@ -246,6 +255,7 @@ namespace DarkKnightTheme.Background
             _textView.LayoutChanged -= OnLayoutChanged;
             _textView.ViewportHeightChanged -= OnViewportChanged;
             _textView.ViewportWidthChanged -= OnViewportChanged;
+            _textView.ViewportLeftChanged -= OnViewportChanged;
             _textView.Closed -= OnClosed;
 
             DarkKnightSettings.SettingsChanged -= OnSettingsChanged;

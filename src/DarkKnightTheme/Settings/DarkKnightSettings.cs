@@ -21,10 +21,10 @@ namespace DarkKnightTheme.Settings
         public static event EventHandler SettingsChanged;
 
         [DataMember]
-        public bool IsEnabled { get; set; } = false;
+        public bool IsEnabled { get; set; } = true;
 
         [DataMember]
-        public string SelectedPreset { get; set; } = "BatcaveMainframe";
+        public string SelectedPreset { get; set; } = "GothamSkyline";
 
         [DataMember]
         public string CustomImagePath { get; set; } = string.Empty;
@@ -36,7 +36,7 @@ namespace DarkKnightTheme.Settings
         public double OverlayOpacity { get; set; } = 0.0; // 0% dark overlay by default to avoid obscuring artwork
 
         [DataMember]
-        public string Position { get; set; } = "Center"; // Center, BottomRight, UniformToFill, TopRight
+        public string Position { get; set; } = "UniformToFill"; // UniformToFill (stretched to viewport), Center, BottomRight, TopRight
 
         public static DarkKnightSettings Instance
         {
@@ -110,12 +110,12 @@ namespace DarkKnightTheme.Settings
 
         public void ResetToDefaults()
         {
-            IsEnabled = false;
-            SelectedPreset = "BatcaveMainframe";
+            IsEnabled = true;
+            SelectedPreset = "GothamSkyline";
             CustomImagePath = string.Empty;
             Opacity = 0.40;
             OverlayOpacity = 0.0;
-            Position = "Center";
+            Position = "UniformToFill";
 
             Save();
         }
@@ -134,8 +134,8 @@ namespace DarkKnightTheme.Settings
             if (OverlayOpacity < 0.0) OverlayOpacity = 0.0;
             if (OverlayOpacity > 0.90) OverlayOpacity = 0.90;
 
-            if (string.IsNullOrEmpty(Position)) Position = "Center";
-            if (string.IsNullOrEmpty(SelectedPreset)) SelectedPreset = "BatcaveMainframe";
+            if (string.IsNullOrEmpty(Position)) Position = "UniformToFill";
+            if (string.IsNullOrEmpty(SelectedPreset)) SelectedPreset = "GothamSkyline";
         }
     }
 }

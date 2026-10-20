@@ -63,39 +63,39 @@
                     <TextBlock Text="SELECT BACKGROUND PRESET" FontWeight="SemiBold" FontSize="12" Foreground="{StaticResource GoldBrush}" Margin="0,0,0,10"/>
 
                     <UniformGrid Columns="2" Rows="2" Margin="0,0,0,10">
-                        <!-- Preset 1: Batcave Mainframe -->
-                        <Border x:Name="CardPreset1" BorderThickness="2" BorderBrush="{StaticResource GoldBrush}" CornerRadius="4" Margin="4" Padding="6" Background="#14171E" MouseLeftButtonDown="SelectPreset1" Cursor="Hand">
+                        <!-- Preset 1: Batman & Catwoman -->
+                        <Border x:Name="CardPreset1" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" CornerRadius="4" Margin="4" Padding="6" Background="#14171E" MouseLeftButtonDown="SelectPreset1" Cursor="Hand">
                             <StackPanel>
                                 <Image x:Name="ImgThumb1" Height="65" Stretch="Uniform" Margin="0,0,0,4"/>
-                                <TextBlock Text="Batcave Mainframe" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
-                                <TextBlock Text="HUD Radar &amp; Telemetry" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Batman &amp; Catwoman" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Moonlit Cathedral Vigil" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
                         <!-- Preset 2: Gotham Skyline -->
-                        <Border x:Name="CardPreset2" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" CornerRadius="4" Margin="4" Padding="6" Background="#14171E" MouseLeftButtonDown="SelectPreset2" Cursor="Hand">
+                        <Border x:Name="CardPreset2" BorderThickness="2" BorderBrush="{StaticResource GoldBrush}" CornerRadius="4" Margin="4" Padding="6" Background="#14171E" MouseLeftButtonDown="SelectPreset2" Cursor="Hand">
                             <StackPanel>
                                 <Image x:Name="ImgThumb2" Height="65" Stretch="Uniform" Margin="0,0,0,4"/>
                                 <TextBlock Text="Gotham Skyline" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
-                                <TextBlock Text="Nocturnal City Spires" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Batman Nocturnal Overlook" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
-                        <!-- Preset 3: Gargoyle Vigil -->
+                        <!-- Preset 3: Joker's Carnival -->
                         <Border x:Name="CardPreset3" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" CornerRadius="4" Margin="4" Padding="6" Background="#14171E" MouseLeftButtonDown="SelectPreset3" Cursor="Hand">
                             <StackPanel>
                                 <Image x:Name="ImgThumb3" Height="65" Stretch="Uniform" Margin="0,0,0,4"/>
-                                <TextBlock Text="Gargoyle Vigil" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
-                                <TextBlock Text="Gothic Ledge Silhouette" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Joker's Carnival" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Rooftop of Chaos" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
-                        <!-- Preset 4: Batmobile Tech Grid -->
+                        <!-- Preset 4: Bat-Signal Storm -->
                         <Border x:Name="CardPreset4" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" CornerRadius="4" Margin="4" Padding="6" Background="#14171E" MouseLeftButtonDown="SelectPreset4" Cursor="Hand">
                             <StackPanel>
                                 <Image x:Name="ImgThumb4" Height="65" Stretch="Uniform" Margin="0,0,0,4"/>
-                                <TextBlock Text="Batmobile Tech Grid" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
-                                <TextBlock Text="CAD Tactical Schematic" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Bat-Signal Storm" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Cloud Searchlight Beam" FontSize="9" Foreground="{StaticResource MutedTextBrush}" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
                     </UniformGrid>
@@ -131,9 +131,9 @@
                     <!-- Positioning -->
                     <TextBlock Text="Alignment / Layout:" FontWeight="SemiBold" Margin="0,0,0,4"/>
                     <ComboBox x:Name="CmbPosition" Background="#12151B" Foreground="{StaticResource TextBrush}" BorderBrush="{StaticResource BorderBrush}" SelectionChanged="CmbPosition_SelectionChanged" Margin="0,0,0,4">
-                        <ComboBoxItem Content="BottomRight (Recommended for minimal distraction)" Tag="BottomRight"/>
-                        <ComboBoxItem Content="Center (Watermark)" Tag="Center"/>
-                        <ComboBoxItem Content="UniformToFill (Full Viewport)" Tag="UniformToFill"/>
+                        <ComboBoxItem Content="UniformToFill (Full Viewport - Stretched)" Tag="UniformToFill"/>
+                        <ComboBoxItem Content="Center (Proportional Fit)" Tag="Center"/>
+                        <ComboBoxItem Content="BottomRight (Corner)" Tag="BottomRight"/>
                         <ComboBoxItem Content="TopRight" Tag="TopRight"/>
                     </ComboBox>
                 </StackPanel>

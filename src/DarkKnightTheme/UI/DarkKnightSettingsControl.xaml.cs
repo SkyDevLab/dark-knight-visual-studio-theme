@@ -94,23 +94,28 @@ namespace DarkKnightTheme.UI
 
         private void UpdatePresetCardSelection(string preset)
         {
-            CardPreset1.BorderBrush = preset == "BatcaveMainframe" ? _activeBrush : _inactiveBrush;
-            CardPreset1.BorderThickness = new Thickness(preset == "BatcaveMainframe" ? 2 : 1);
+            bool isP1 = preset == "BatcaveMainframe" || preset == "GothamMoonVigil" || preset == "BatAndCat";
+            bool isP2 = preset == "GothamSkyline" || preset == "DarkKnightOverlook";
+            bool isP3 = preset == "GargoyleVigil" || preset == "JokerCarnival";
+            bool isP4 = preset == "BatmobileTechGrid" || preset == "BatSignal";
 
-            CardPreset2.BorderBrush = preset == "GothamSkyline" ? _activeBrush : _inactiveBrush;
-            CardPreset2.BorderThickness = new Thickness(preset == "GothamSkyline" ? 2 : 1);
+            CardPreset1.BorderBrush = isP1 ? _activeBrush : _inactiveBrush;
+            CardPreset1.BorderThickness = new Thickness(isP1 ? 2 : 1);
 
-            CardPreset3.BorderBrush = preset == "GargoyleVigil" ? _activeBrush : _inactiveBrush;
-            CardPreset3.BorderThickness = new Thickness(preset == "GargoyleVigil" ? 2 : 1);
+            CardPreset2.BorderBrush = isP2 ? _activeBrush : _inactiveBrush;
+            CardPreset2.BorderThickness = new Thickness(isP2 ? 2 : 1);
 
-            CardPreset4.BorderBrush = preset == "BatmobileTechGrid" ? _activeBrush : _inactiveBrush;
-            CardPreset4.BorderThickness = new Thickness(preset == "BatmobileTechGrid" ? 2 : 1);
+            CardPreset3.BorderBrush = isP3 ? _activeBrush : _inactiveBrush;
+            CardPreset3.BorderThickness = new Thickness(isP3 ? 2 : 1);
+
+            CardPreset4.BorderBrush = isP4 ? _activeBrush : _inactiveBrush;
+            CardPreset4.BorderThickness = new Thickness(isP4 ? 2 : 1);
         }
 
         private void SelectPreset1(object sender, MouseButtonEventArgs e)
         {
-            DarkKnightSettings.Instance.SelectedPreset = "BatcaveMainframe";
-            UpdatePresetCardSelection("BatcaveMainframe");
+            DarkKnightSettings.Instance.SelectedPreset = "GothamMoonVigil";
+            UpdatePresetCardSelection("GothamMoonVigil");
             ApplyCurrentSettings();
         }
 
@@ -123,15 +128,15 @@ namespace DarkKnightTheme.UI
 
         private void SelectPreset3(object sender, MouseButtonEventArgs e)
         {
-            DarkKnightSettings.Instance.SelectedPreset = "GargoyleVigil";
-            UpdatePresetCardSelection("GargoyleVigil");
+            DarkKnightSettings.Instance.SelectedPreset = "JokerCarnival";
+            UpdatePresetCardSelection("JokerCarnival");
             ApplyCurrentSettings();
         }
 
         private void SelectPreset4(object sender, MouseButtonEventArgs e)
         {
-            DarkKnightSettings.Instance.SelectedPreset = "BatmobileTechGrid";
-            UpdatePresetCardSelection("BatmobileTechGrid");
+            DarkKnightSettings.Instance.SelectedPreset = "BatSignal";
+            UpdatePresetCardSelection("BatSignal");
             ApplyCurrentSettings();
         }
 
