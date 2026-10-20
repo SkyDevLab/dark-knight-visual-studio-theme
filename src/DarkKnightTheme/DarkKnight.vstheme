@@ -406,6 +406,7 @@
       </Color>
       <Color Name="WindowText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="StatusBarBuilding">
         <Background Type="CT_RAW" Source="FF171C25" />
@@ -1032,6 +1033,7 @@
       </Color>
       <Color Name="ToolWindowText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="BrandedUIBorder">
         <Background Type="CT_RAW" Source="FF69552B" />
@@ -1346,15 +1348,19 @@
       </Color>
       <Color Name="ToolWindowTabMouseOverText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
       <Color Name="ToolWindowTabSelectedActiveText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ToolWindowTabSelectedText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ToolWindowTabText">
         <Background Type="CT_RAW" Source="FF929BA8" />
+        <Foreground Type="CT_RAW" Source="FF929BA8" />
       </Color>
       <Color Name="ToolTip">
         <Background Type="CT_RAW" Source="FF171C25" />
@@ -1401,6 +1407,23 @@
       </Color>
       <Color Name="StatusBarBorder">
         <Background Type="CT_RAW" Source="FF69552B" />
+      </Color>
+      <Color Name="ControlText">
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="ControlLightText">
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="ControlDarkText">
+        <Foreground Type="CT_RAW" Source="FF929BA8" />
+      </Color>
+      <Color Name="PanelTitle">
+        <Background Type="CT_RAW" Source="FF171C25" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+      </Color>
+      <Color Name="PanelTitleActive">
+        <Background Type="CT_RAW" Source="FF1C2330" />
+        <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
       <Color Name="ScrollBarThumb">
         <Background Type="CT_RAW" Source="FF2E3744" />
@@ -1916,6 +1939,7 @@
       </Color>
       <Color Name="ListItemTextSelected">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ListItemBackgroundFocused">
         <Background Type="CT_RAW" Source="FF1C2330" />
@@ -1934,18 +1958,22 @@
       </Color>
       <Color Name="ListItemText">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ListItemTextFocused">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ListItemTextHover">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ListItemTextPressed">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="ListItemTextUnfocused">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="InnerTabActiveIndicator">
         <Background Type="CT_RAW" Source="FFFFC94A" />
@@ -2176,6 +2204,7 @@
     <Category Name="TreeView" GUID="{92ecf08e-8b13-4cf4-99e9-ae2692382185}">
       <Color Name="Background">
         <Background Type="CT_RAW" Source="FF171C25" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="DragOverItem">
         <Background Type="CT_RAW" Source="FFE8B84A" />
@@ -2183,30 +2212,35 @@
       </Color>
       <Color Name="Glyph">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FF929BA8" />
       </Color>
       <Color Name="HighlightedSpan">
         <Background Type="CT_RAW" Source="FF1B385C" />
-        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
       <Color Name="SelectedItemActive">
         <Background Type="CT_RAW" Source="FF1B385C" />
         <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="SelectedItemActiveGlyph">
-        <Background Type="CT_RAW" Source="FFFFC94A" />
+        <Background Type="CT_RAW" Source="FFE6EAF0" />
+        <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
       <Color Name="SelectedItemActiveGlyphMouseOver">
         <Background Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="SelectedItemInactive">
         <Background Type="CT_RAW" Source="FF162C46" />
-        <Foreground Type="CT_RAW" Source="FF929BA8" />
+        <Foreground Type="CT_RAW" Source="FFE6EAF0" />
       </Color>
       <Color Name="SelectedItemInactiveGlyph">
         <Background Type="CT_RAW" Source="FF929BA8" />
       </Color>
       <Color Name="SelectedItemInactiveGlyphMouseOver">
         <Background Type="CT_RAW" Source="FF929BA8" />
+      </Color>
+      <Color Name="FocusVisualBorder">
+        <Foreground Type="CT_RAW" Source="FFFFC94A" />
       </Color>
     </Category>
     <Category Name="UserNotifications" GUID="{5d42b198-efca-431c-92aa-8b595d0d39c2}">

@@ -232,7 +232,7 @@ namespace DarkKnightTheme.UI
 
             if (TxtStatus != null)
             {
-                TxtStatus.Text = "Settings reset to defaults (Background disabled, 8% opacity).";
+                TxtStatus.Text = "Settings reset to defaults (Background disabled, 40% opacity).";
             }
         }
     }

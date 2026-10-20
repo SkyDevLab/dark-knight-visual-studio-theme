@@ -58,6 +58,7 @@ namespace DarkKnightTheme.Background
             DarkKnightSettings.SettingsChanged += OnSettingsChanged;
 
             ApplySettings();
+            UpdateLayoutBounds();
         }
 
         private void OnSettingsChanged(object sender, EventArgs e)
@@ -99,21 +100,24 @@ namespace DarkKnightTheme.Background
             double width = Math.Max(0, _textView.ViewportWidth);
             double height = Math.Max(0, _textView.ViewportHeight);
 
-            Canvas.SetLeft(_container, _textView.ViewportLeft);
-            Canvas.SetTop(_container, _textView.ViewportTop);
+            Canvas.SetLeft(_container, 0);
+            Canvas.SetTop(_container, 0);
             _container.Width = width;
             _container.Height = height;
 
-            if (!_isAdornmentAdded)
+            if (_adornmentLayer.IsEmpty || !_isAdornmentAdded)
             {
                 _adornmentLayer.RemoveAllAdornments();
-                _adornmentLayer.AddAdornment(
-                    AdornmentPositioningBehavior.OwnerControlled,
-                    null,
-                    null,
-                    _container,
-                    (tag, uiElement) => { _isAdornmentAdded = false; });
-                _isAdornmentAdded = true;
+                if (width > 0 && height > 0)
+                {
+                    _adornmentLayer.AddAdornment(
+                        AdornmentPositioningBehavior.ViewportRelative,
+                        null,
+                        "DarkKnightBackgroundAdornment",
+                        _container,
+                        (tag, uiElement) => { _isAdornmentAdded = false; });
+                    _isAdornmentAdded = true;
+                }
             }
         }
 
@@ -133,8 +137,11 @@ namespace DarkKnightTheme.Background
             }
 
             _container.Visibility = Visibility.Visible;
-            _image.Opacity = settings.Opacity;
-            _overlay.Opacity = settings.OverlayOpacity;
+            _image.Opacity = Math.Max(0.05, Math.Min(1.0, settings.Opacity));
+            _overlay.Opacity = Math.Max(0.0, Math.Min(0.9, settings.OverlayOpacity));
+
+            // Load Image
+            _image.Source = ResolveImageSource(settings);
 
             // Positioning & Scaling
             switch (settings.Position)
@@ -152,18 +159,15 @@ namespace DarkKnightTheme.Background
                 case "TopRight":
                     _image.HorizontalAlignment = HorizontalAlignment.Right;
                     _image.VerticalAlignment = VerticalAlignment.Top;
-                    _image.Stretch = Stretch.None;
+                    _image.Stretch = Stretch.Uniform;
                     break;
                 case "BottomRight":
                 default:
                     _image.HorizontalAlignment = HorizontalAlignment.Right;
                     _image.VerticalAlignment = VerticalAlignment.Bottom;
-                    _image.Stretch = Stretch.None;
+                    _image.Stretch = Stretch.Uniform;
                     break;
             }
-
-            // Load Image
-            _image.Source = ResolveImageSource(settings);
         }
 
         private ImageSource ResolveImageSource(DarkKnightSettings settings)
@@ -196,7 +200,18 @@ namespace DarkKnightTheme.Background
                             break;
                     }
 
-                    string assemblyDir = System.IO.Path.GetDirectoryName(typeof(DarkKnightSettings).Assembly.Location);
+                    string assemblyLocation = typeof(DarkKnightBackgroundAdornment).Assembly.Location;
+                    if (string.IsNullOrEmpty(assemblyLocation))
+                    {
+                        assemblyLocation = typeof(DarkKnightSettings).Assembly.Location;
+                    }
+                    if (string.IsNullOrEmpty(assemblyLocation) && !string.IsNullOrEmpty(typeof(DarkKnightSettings).Assembly.CodeBase))
+                    {
+                        var uri = new Uri(typeof(DarkKnightSettings).Assembly.CodeBase);
+                        assemblyLocation = uri.LocalPath;
+                    }
+
+                    string assemblyDir = System.IO.Path.GetDirectoryName(assemblyLocation);
                     if (!string.IsNullOrEmpty(assemblyDir))
                     {
                         string candidate = System.IO.Path.Combine(assemblyDir, "Resources", "Backgrounds", filename);

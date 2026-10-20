@@ -117,16 +117,16 @@
                     <!-- Image Opacity -->
                     <DockPanel Margin="0,0,0,4">
                         <TextBlock Text="Image Opacity:" FontWeight="SemiBold" DockPanel.Dock="Left"/>
-                        <TextBlock x:Name="LblOpacity" Text="8%" FontWeight="Bold" Foreground="{StaticResource GoldBrush}" DockPanel.Dock="Right"/>
+                        <TextBlock x:Name="LblOpacity" Text="40%" FontWeight="Bold" Foreground="{StaticResource GoldBrush}" DockPanel.Dock="Right"/>
                     </DockPanel>
-                    <Slider x:Name="SliderOpacity" Minimum="1" Maximum="35" Value="8" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SliderOpacity_ValueChanged" Margin="0,0,0,12"/>
+                    <Slider x:Name="SliderOpacity" Minimum="5" Maximum="100" Value="40" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="SliderOpacity_ValueChanged" Margin="0,0,0,12"/>
 
                     <!-- Dark Translucent Overlay -->
                     <DockPanel Margin="0,0,0,4">
                         <TextBlock Text="Dark Tint Overlay (#101216):" FontWeight="SemiBold" DockPanel.Dock="Left"/>
-                        <TextBlock x:Name="LblOverlay" Text="70%" FontWeight="Bold" Foreground="{StaticResource BlueBrush}" DockPanel.Dock="Right"/>
+                        <TextBlock x:Name="LblOverlay" Text="0%" FontWeight="Bold" Foreground="{StaticResource BlueBrush}" DockPanel.Dock="Right"/>
                     </DockPanel>
-                    <Slider x:Name="SliderOverlay" Minimum="0" Maximum="95" Value="70" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="SliderOverlay_ValueChanged" Margin="0,0,0,12"/>
+                    <Slider x:Name="SliderOverlay" Minimum="0" Maximum="90" Value="0" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="SliderOverlay_ValueChanged" Margin="0,0,0,12"/>
 
                     <!-- Positioning -->
                     <TextBlock Text="Alignment / Layout:" FontWeight="SemiBold" Margin="0,0,0,4"/>

@@ -30,13 +30,13 @@ namespace DarkKnightTheme.Settings
         public string CustomImagePath { get; set; } = string.Empty;
 
         [DataMember]
-        public double Opacity { get; set; } = 0.08; // Default subtle opacity (8%) for high readability
+        public double Opacity { get; set; } = 0.40; // Default visible watermark opacity (40%)
 
         [DataMember]
-        public double OverlayOpacity { get; set; } = 0.70; // 70% dark translucent overlay tint
+        public double OverlayOpacity { get; set; } = 0.0; // 0% dark overlay by default to avoid obscuring artwork
 
         [DataMember]
-        public string Position { get; set; } = "BottomRight"; // BottomRight, Center, UniformToFill, TopRight
+        public string Position { get; set; } = "Center"; // Center, BottomRight, UniformToFill, TopRight
 
         public static DarkKnightSettings Instance
         {
@@ -113,9 +113,9 @@ namespace DarkKnightTheme.Settings
             IsEnabled = false;
             SelectedPreset = "BatcaveMainframe";
             CustomImagePath = string.Empty;
-            Opacity = 0.08;
-            OverlayOpacity = 0.70;
-            Position = "BottomRight";
+            Opacity = 0.40;
+            OverlayOpacity = 0.0;
+            Position = "Center";
 
             Save();
         }
@@ -127,13 +127,14 @@ namespace DarkKnightTheme.Settings
 
         public void ValidateAndClamp()
         {
-            if (Opacity < 0.01) Opacity = 0.01;
-            if (Opacity > 0.60) Opacity = 0.60;
+            // Auto-heal any legacy or invalid <5% invisible opacity to 40%
+            if (Opacity < 0.05) Opacity = 0.40;
+            if (Opacity > 1.0) Opacity = 1.0;
 
             if (OverlayOpacity < 0.0) OverlayOpacity = 0.0;
-            if (OverlayOpacity > 0.95) OverlayOpacity = 0.95;
+            if (OverlayOpacity > 0.90) OverlayOpacity = 0.90;
 
-            if (string.IsNullOrEmpty(Position)) Position = "BottomRight";
+            if (string.IsNullOrEmpty(Position)) Position = "Center";
             if (string.IsNullOrEmpty(SelectedPreset)) SelectedPreset = "BatcaveMainframe";
         }
     }
