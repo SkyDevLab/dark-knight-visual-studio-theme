@@ -18,10 +18,19 @@ namespace DarkKnightTheme.UI
 
         public DarkKnightSettingsControl()
         {
-            InitializeComponent();
-            LoadThumbnails();
-            LoadSettingsToUI();
-            _isInitializing = false;
+            try
+            {
+                InitializeComponent();
+                LoadThumbnails();
+                LoadSettingsToUI();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                _isInitializing = false;
+            }
         }
 
         private void LoadThumbnails()

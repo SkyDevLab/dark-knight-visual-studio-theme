@@ -7,8 +7,8 @@ using Task = System.Threading.Tasks.Task;
 
 namespace DarkKnightTheme
 {
-    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true, RegisterUsing = RegistrationMethod.CodeBase)]
+    [InstalledProductRegistration("Dark Knight Theme", "Batcave Workstation Dark Theme for Visual Studio 2022", "1.1")]
     [ProvideToolWindow(typeof(DarkKnightSettingsToolWindow), Style = VsDockStyle.Tabbed, Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]
     [ProvideOptionPage(typeof(DarkKnightSettingsPage), "Dark Knight Theme", "Batcave Background", 0, 0, true)]
     [Guid(DarkKnightPackage.PackageGuidString)]

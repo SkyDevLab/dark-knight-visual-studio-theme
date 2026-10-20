@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A premium, cinematic Batman-inspired dark theme for Microsoft Visual Studio 2022.</strong><br/>
-  Featuring a distinctive Batcave workstation aesthetic optimized for professional C# and .NET development, with an optional non-intrusive editor background system.
+  Featuring a distinctive Batcave workstation aesthetic with elegant golden panel borders, professional C# and .NET syntax highlighting, and an optional non-intrusive editor background system.
 </p>
 
 <p align="center">
@@ -21,15 +21,16 @@
 
 ## Overview
 
-**Dark Knight** transforms Visual Studio 2022 into a sophisticated Batcave workstation. Engineered for professional .NET developers, it replaces standard high-glare surfaces with a balanced near-black charcoal foundation, deep graphite tool windows, muted Batman gold accents, and electric Gotham blue highlights.
+**Dark Knight** transforms Visual Studio 2022 into a sophisticated Batcave workstation. Engineered for professional .NET developers, it replaces standard high-glare surfaces with a balanced near-black charcoal foundation (`#101216`), deep graphite tool windows (`#171C25`), muted antique gold panel borders (`#69552B`), bright gold active accents (`#FFC94A`), and electric Gotham blue highlights (`#4D8DCC`).
 
 This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the official Visual Studio SDK, not a Visual Studio Code port. It delivers:
 
-1. **Full IDE Theme Coverage:** 54 Visual Studio categories styled natively via compiled `.pkgdef` and `.vstheme` resources.
-2. **Professional C# & .NET Roslyn Highlighting:** Accessible semantic colorization with high WCAG AA/AAA contrast ratios.
-3. **Optional MEF Editor Background System:** Subtle Batcave workstation watermarks rendered behind code via official WPF editor APIs (`IWpfTextViewCreationListener`), with adjustable opacity and a dark tint shield.
-4. **Interactive Settings Interface:** Full configuration panel hosted both under **Tools > Options** and as a dedicated dockable **Tool Window**.
-5. **Original UI Assets:** Bespoke nocturnal vigilante branding, abstract emblem, status bar icon, tool window icon, surface texture, and 4 procedural background themes.
+1. **Elegant Golden Panel Borders:** Restrained 1-pixel antique gold borders around Solution Explorer, Properties, Git Changes, GitHub Copilot Chat, Error List, Output window, and Terminal panels.
+2. **Full IDE Theme Coverage:** 54 Visual Studio categories styled natively via compiled `.pkgdef` and `.vstheme` resources with fallback inheritance.
+3. **Professional C# & .NET Roslyn Highlighting:** Accessible semantic colorization meeting WCAG 2.1 AA/AAA contrast ratios.
+4. **Optional MEF Editor Background System:** Subtle Batcave workstation watermarks rendered behind code via official WPF editor APIs (`IWpfTextViewCreationListener`), with adjustable opacity and a dark tint shield.
+5. **Interactive Settings Interface:** Full configuration panel hosted under **Tools > Options > Dark Knight Theme > Batcave Background** and as a dedicated dockable **Tool Window**.
+6. **Original UI Assets:** Bespoke nocturnal vigilante branding, abstract emblem, status bar icon, tool window icon, surface texture, and 4 procedural background themes.
 
 ---
 
@@ -37,13 +38,13 @@ This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the of
 
 ![Dark Knight Marketplace Banner](assets/marketplace_banner.png)
 
-### 1. Code Editor & Professional C# Syntax
+### 1. Code Editor & Professional C# Syntax with Gold Tab Accent
 ![C# Code Editor Preview](assets/screenshots/01_editor_csharp.png)
-*High-contrast C# 12 / .NET code editor: Keywords in Gotham blue (`#4D8DCC`), types in syntax cyan (`#42D9D0`), methods in soft blue (`#61AFEF`), strings in muted gold (`#E7B45A`), numbers in lavender (`#C678DD`), and comments in muted green (`#7F9B8A`).*
+*High-contrast C# 12 / .NET code editor: Active document tab with a bright gold accent bar (`#FFC94A`), antique gold border framing (`#69552B`), keywords in Gotham blue (`#4D8DCC`), types in syntax cyan (`#42D9D0`), methods in soft blue (`#61AFEF`), and strings in muted gold (`#E7B45A`).*
 
-### 2. Solution Explorer & Batcave Tool Windows
+### 2. Solution Explorer & Batcave Tool Windows with Gold Borders
 ![Solution Explorer & Tool Windows](assets/screenshots/02_solution_explorer_tool_windows.png)
-*Unified dark framing: Active tab featuring a Batman gold accent bar, secondary graphite tool windows (`#171C25`), and distinct selection states.*
+*Unified dark framing: Thin antique gold borders (`#69552B`) outlining Solution Explorer and tool windows, distinct selection states, and gold divider accents.*
 
 ### 3. IntelliSense & Signature Help
 ![IntelliSense & Signature Help](assets/screenshots/03_intellisense_signature_help.png)
@@ -59,6 +60,23 @@ This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the of
 
 ---
 
+## Golden Borders & Visual Hierarchy
+
+The theme introduces a three-tier gold visual hierarchy designed to keep the workspace sleek and focused:
+
+| Element / State | Color Token | Hex Code | Visual Behavior |
+| :--- | :--- | :--- | :--- |
+| **Inactive Panel Borders** | `ToolWindowBorder`, `PanelBorder` | `#69552B` | 1-pixel antique gold perimeter framing docked panels |
+| **Panel & Editor Splitters** | `HorizontalResizeGrip`, `VerticalResizeGrip*` | `#69552B` | Subtle gold divider line between editor and docked windows |
+| **Active Document Tab** | `FileTabSelectedBorder` | `#FFC94A` | High-visibility bright gold top accent line on active tab |
+| **Inactive Document Tabs** | `FileTabInactiveBorder` | `#69552B` | Subtle dark borders that blend cleanly into the background |
+| **Active Tool Window Tab** | `ToolWindowTabSelectedBorder` | `#FFC94A` | Bright gold border for the selected tool window tab |
+| **Floating Window Frames** | `ToolWindowFloatingFrame` | `#E8B84A` | Primary gold border for floating/undocked windows |
+| **Keyboard Focus Visual** | `FocusVisual`, `TextBoxBorderFocused` | `#FFC94A` | Clearly visible gold keyboard navigation rectangle |
+| **Toolbar Separators** | `CommandBarToolBarSeparator` | `#69552B` | 1-pixel gold divider ticks between command groups |
+
+---
+
 ## Color Palette & Design System
 
 The Dark Knight palette is carefully calibrated to prevent eye fatigue during marathon coding sessions while meeting or exceeding **WCAG 2.1 AA/AAA** accessibility standards:
@@ -68,9 +86,11 @@ The Dark Knight palette is carefully calibrated to prevent eye fatigue during ma
 | **Editor Canvas** | `#101216` | Main editor canvas, document well background, terminal background |
 | **Tool Window Background** | `#171C25` | Solution Explorer, Git Changes, Error List, Output window |
 | **Secondary Surface** | `#1C2330` | Title bar, tab well backdrop, menus, borders, dialog cards |
+| **Inactive Panel Border** | `#69552B` | **Subtle Antique Gold**: 1px borders around tool windows and splitters |
+| **Active Panel Border** | `#E8B84A` | **Primary Gold**: Floating tool window frames, menu hovers |
+| **Selected Tab / Focus** | `#FFC94A` | **Bright Gold**: Active document tab top accent, focus visual |
 | **Primary Text** | `#E6EAF0` | Soft white: Plain text, local variables, operators, punctuation |
 | **Muted Text** | `#929BA8` | Cool gray: Inactive tab text, tool window labels, line numbers |
-| **Accent Gold** | `#E8B84A` | **Batman Gold**: Active tab accent bar, cursor, warning indicators |
 | **Accent Blue** | `#4D8DCC` | **Gotham Blue**: C# keywords, primary buttons, focus frames |
 | **Syntax Cyan** | `#42D9D0` | Classes, record structs, enums, interfaces, generic types |
 | **String Color** | `#E7B45A` | Muted gold: String literals, verbatim strings, CSS values |
@@ -101,12 +121,15 @@ The background watermark system is implemented as a **separate, non-intrusive ME
 
 ---
 
-## Settings Interface
+## Settings Interface (Tools > Options & Tool Window)
 
 Customize the Batcave background in real time through two official Visual Studio interfaces:
 
 1. **Tools > Options:** Navigate to **Tools > Options > Dark Knight Theme > Batcave Background**.
 2. **Dockable Tool Window:** Open **View > Other Windows > Dark Knight — Batcave Background Settings**.
+
+### Package Registration & Codebase Configuration:
+The extension registers `DarkKnightPackage` with `RegisterUsing = RegistrationMethod.CodeBase` and COM visibility (`[ComVisible(true)]`), ensuring that Visual Studio loads the assembly directly from the user extension directory without `FileNotFoundException` and cleanly embeds the WPF options control.
 
 ### Configurable Controls:
 - **Enable/Disable Toggle:** Instant master switch for editor watermarks.
@@ -117,6 +140,16 @@ Customize the Batcave background in real time through two official Visual Studio
 - **Positioning & Scaling:** Choose **BottomRight** (recommended), **Center**, or **UniformToFill**.
 - **Reset to Defaults:** One-click restoration of clean baseline settings.
 - **Real-Time Synchronization:** Settings changes instantly broadcast to all open editor tabs without restarting Visual Studio.
+
+---
+
+## Native Visual Studio Border Customization & Platform Limitations
+
+Visual Studio enforces strict architectural boundaries regarding shell borders:
+
+1. **Shared Environment Resources:** Visual Studio does not provide independent, per-tool-window color GUIDs for borders (e.g. there is no separate "Solution Explorer Border" vs "Properties Border" resource). Docked tool windows (Solution Explorer, Properties, Git Changes, GitHub Copilot Chat, Error List, Output, and Developer PowerShell) all share `Environment.ToolWindowBorder` and `Environment.PanelBorder`. Setting this token to `#69552B` uniformly outlines all tool windows with a clean 1-pixel antique gold border.
+2. **Native Win32 Frame Elements:** The outer OS window border (Aero glass / DWM border) and window caption buttons (Minimize, Maximize, Close) are governed by the Windows Desktop Window Manager, not Visual Studio theme resources.
+3. **Third-Party Extensions:** Extensions that hardcode color brushes instead of binding to Visual Studio's `VsBrushes.ToolWindowBorderKey` will render their hardcoded borders.
 
 ---
 
@@ -162,14 +195,14 @@ After installation, activate Dark Knight in Visual Studio:
 bold-lovelace/
 ├── DarkKnightTheme.sln                   # Visual Studio 2022 Solution
 ├── dist/
-│   └── DarkKnightTheme.vsix             # Distributable VSIX Package (451 KB)
+│   └── DarkKnightTheme.vsix             # Distributable VSIX Package (463 KB)
 ├── src/
 │   └── DarkKnightTheme/
-│       ├── DarkKnightTheme.csproj       # VSIX & MEF Project File
+│       ├── DarkKnightTheme.csproj       # VSIX & MEF Project File with CodeBase support
 │       ├── source.extension.vsixmanifest# VSIX v2 Manifest (AMD64, VS 2022)
-│       ├── DarkKnightPackage.cs         # AsyncPackage Entry Point
-│       ├── DarkKnight.vstheme           # XML Source Theme Definition (54 Categories)
-│       ├── DarkKnight.pkgdef            # Compiled Binary Theme Package Definition
+│       ├── DarkKnightPackage.cs         # AsyncPackage Entry Point (CodeBase registered)
+│       ├── DarkKnight.vstheme           # XML Source Theme Definition with Gold Borders
+│       ├── DarkKnight.pkgdef            # Compiled Binary Theme Package Definition (126.5 KB)
 │       ├── LICENSE.txt                  # MIT License & Trademark Notice
 │       ├── Background/
 │       │   ├── DarkKnightBackgroundAdornmentLayer.cs    # MEF Adornment Definition
@@ -179,8 +212,8 @@ bold-lovelace/
 │       │   └── DarkKnightSettings.cs    # Settings Model & JSON Persistence
 │       ├── UI/
 │       │   ├── DarkKnightSettingsControl.xaml         # WPF Settings Panel
-│       │   ├── DarkKnightSettingsControl.xaml.cs      # UI Code-Behind
-│       │   ├── DarkKnightSettingsPage.cs              # Tools > Options DialogPage
+│       │   ├── DarkKnightSettingsControl.xaml.cs      # UI Code-Behind (Crash-safe)
+│       │   ├── DarkKnightSettingsPage.cs              # Tools > Options DialogPage (COM-visible)
 │       │   └── DarkKnightSettingsToolWindow.cs        # Dockable ToolWindowPane
 │       └── Resources/
 │           ├── Icon.png                 # 128x128 Extension Icon
@@ -200,12 +233,12 @@ bold-lovelace/
 │   └── screenshots/                     # 5 High-Resolution Showcase Previews
 ├── build/
 │   ├── build.ps1                        # Master Build Script
-│   ├── generate_theme.ps1               # Theme XML & PKGDEF Compiler
+│   ├── generate_theme.ps1               # Theme XML & PKGDEF Compiler with Gold Borders
 │   ├── generate_backgrounds.ps1         # Original Background Artwork Generator
 │   └── generate_graphics.ps1            # Icon & Preview Screenshot Generator
 ├── docs/
-│   ├── COLOR_PALETTE.md                 # Complete Palette & WCAG Specifications
-│   ├── ARCHITECTURE.md                  # Extensibility SDK & PKGDEF Architecture
+│   ├── COLOR_PALETTE.md                 # Complete Palette & Gold Border Hierarchy
+│   ├── ARCHITECTURE.md                  # Extensibility SDK, Border Investigation & PKGDEF Architecture
 │   └── VERIFICATION.md                  # Verification Report & Test Cases
 └── README.md                            # Documentation & Marketplace Overview
 ```
@@ -227,19 +260,6 @@ Visual Studio custom themes rely on a fallback inheritance model. In `DarkKnight
 - Any obscure or third-party tool window not explicitly styled by Dark Knight seamlessly falls back to Visual Studio Dark colors.
 - Eliminates bright white or unstyled surfaces.
 - Zero runtime overhead or memory consumption compared to built-in themes.
-
----
-
-## Known Limitations
-
-- **Legacy Win32 Dialogs:** A few legacy modal dialogs in Visual Studio (e.g. native COM file dialogs) are managed directly by the Windows OS and do not participate in WPF theming.
-- **Third-Party Extension Brushes:** Extensions that hardcode color brushes instead of binding to Visual Studio's `VsBrushes` theme resources will display their hardcoded colors.
-
----
-
-## Legal & Trademark Notice
-
-*This theme is an independent open-source creative project inspired by the cinematic Batcave workstation aesthetic. It is not affiliated with, sponsored by, or endorsed by DC Comics, Warner Bros. Discovery, or Microsoft Corporation. All trademarks belong to their respective owners.*
 
 ---
 

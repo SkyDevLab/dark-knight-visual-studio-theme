@@ -23,28 +23,28 @@ $jsonContent = @'
     "activityBar.background": "#101216",
     "activityBar.foreground": "#E6EAF0",
     "activityBar.inactiveForeground": "#929BA8",
-    "activityBar.activeBorder": "#E8B84A",
+    "activityBar.activeBorder": "#FFC94A",
     "activityBarBadge.background": "#E8B84A",
     "activityBarBadge.foreground": "#101216",
     "sideBar.background": "#171C25",
     "sideBar.foreground": "#E6EAF0",
-    "sideBar.border": "#1C2330",
+    "sideBar.border": "#69552B",
     "sideBarTitle.foreground": "#E6EAF0",
     "sideBarSectionHeader.background": "#1C2330",
     "sideBarSectionHeader.foreground": "#E6EAF0",
-    "sideBarSectionHeader.border": "#1C2330",
+    "sideBarSectionHeader.border": "#69552B",
     "editorGroupHeader.tabsBackground": "#171C25",
-    "editorGroupHeader.tabsBorder": "#1C2330",
+    "editorGroupHeader.tabsBorder": "#69552B",
     "tab.activeBackground": "#101216",
     "tab.activeForeground": "#E6EAF0",
-    "tab.activeBorder": "#E8B84A",
-    "tab.activeBorderTop": "#E8B84A",
+    "tab.activeBorder": "#FFC94A",
+    "tab.activeBorderTop": "#FFC94A",
     "tab.inactiveBackground": "#171C25",
     "tab.inactiveForeground": "#929BA8",
-    "tab.border": "#1C2330",
+    "tab.border": "#69552B",
     "tab.unfocusedActiveBackground": "#101216",
     "tab.unfocusedActiveForeground": "#C5CBD4",
-    "tab.unfocusedActiveBorderTop": "#C69B37",
+    "tab.unfocusedActiveBorderTop": "#E8B84A",
     "tab.unfocusedInactiveBackground": "#171C25",
     "tab.unfocusedInactiveForeground": "#707A8A",
     "editor.background": "#101216",
@@ -54,16 +54,16 @@ $jsonContent = @'
     "editor.selectionBackground": "#1B385C",
     "editor.selectionHighlightBackground": "#264F78",
     "editor.inactiveSelectionBackground": "#162C46",
-    "editorCursor.foreground": "#E8B84A",
+    "editorCursor.foreground": "#FFC94A",
     "editorLineNumber.foreground": "#4E5766",
     "editorLineNumber.activeForeground": "#E8B84A",
     "editorWhitespace.foreground": "#2A323E",
     "editorIndentGuide.background": "#1C2330",
-    "editorIndentGuide.activeBackground": "#4D8DCC",
-    "editorRuler.foreground": "#1C2330",
+    "editorIndentGuide.activeBackground": "#69552B",
+    "editorRuler.foreground": "#69552B40",
     "editorBracketMatch.background": "#253545",
-    "editorBracketMatch.border": "#4D8DCC",
-    "editorOverviewRuler.border": "#1C2330",
+    "editorBracketMatch.border": "#FFC94A",
+    "editorOverviewRuler.border": "#69552B",
     "editorGutter.background": "#101216",
     "editorGutter.modifiedBackground": "#E8B84A",
     "editorGutter.addedBackground": "#55D6A0",
@@ -73,29 +73,29 @@ $jsonContent = @'
     "editorInfo.foreground": "#4D8DCC",
     "statusBar.background": "#12151B",
     "statusBar.foreground": "#929BA8",
-    "statusBar.border": "#1C2330",
+    "statusBar.border": "#69552B",
     "statusBar.debuggingBackground": "#1A365D",
     "statusBar.debuggingForeground": "#E6EAF0",
     "statusBar.noFolderBackground": "#101216",
     "statusBarItem.remoteBackground": "#4D8DCC",
     "statusBarItem.remoteForeground": "#101216",
-    "statusBarItem.prominentBackground": "#E8B84A",
+    "statusBarItem.prominentBackground": "#FFC94A",
     "statusBarItem.prominentForeground": "#101216",
     "titleBar.activeBackground": "#171C25",
     "titleBar.activeForeground": "#E6EAF0",
     "titleBar.inactiveBackground": "#101216",
     "titleBar.inactiveForeground": "#929BA8",
-    "titleBar.border": "#1C2330",
+    "titleBar.border": "#69552B",
     "menu.background": "#171C25",
     "menu.foreground": "#E6EAF0",
     "menu.selectionBackground": "#1C2330",
     "menu.selectionForeground": "#E6EAF0",
-    "menu.selectionBorder": "#4D8DCC",
-    "menu.separatorBackground": "#1C2330",
-    "menu.border": "#1C2330",
+    "menu.selectionBorder": "#E8B84A",
+    "menu.separatorBackground": "#69552B",
+    "menu.border": "#69552B",
     "menubar.selectionBackground": "#1C2330",
     "menubar.selectionForeground": "#E6EAF0",
-    "menubar.selectionBorder": "#4D8DCC",
+    "menubar.selectionBorder": "#E8B84A",
     "list.activeSelectionBackground": "#1B385C",
     "list.activeSelectionForeground": "#E6EAF0",
     "list.inactiveSelectionBackground": "#162C46",
@@ -103,8 +103,8 @@ $jsonContent = @'
     "list.hoverBackground": "#1C2330",
     "list.hoverForeground": "#E6EAF0",
     "list.dropBackground": "#252B35",
-    "list.highlightForeground": "#E8B84A",
-    "tree.indentGuidesStroke": "#1C2330",
+    "list.highlightForeground": "#FFC94A",
+    "tree.indentGuidesStroke": "#69552B80",
     "button.background": "#4D8DCC",
     "button.foreground": "#FFFFFF",
     "button.hoverBackground": "#3A6F9E",
@@ -113,9 +113,9 @@ $jsonContent = @'
     "button.secondaryHoverBackground": "#252E3F",
     "input.background": "#1C2330",
     "input.foreground": "#E6EAF0",
-    "input.border": "#2A3445",
+    "input.border": "#69552B",
     "input.placeholderForeground": "#5A6270",
-    "inputOption.activeBorder": "#4D8DCC",
+    "inputOption.activeBorder": "#FFC94A",
     "inputOption.activeBackground": "#1B385C",
     "inputOption.activeForeground": "#E6EAF0",
     "inputValidation.errorBackground": "#3B1D22",
@@ -129,21 +129,21 @@ $jsonContent = @'
     "inputValidation.infoForeground": "#E6EAF0",
     "dropdown.background": "#1C2330",
     "dropdown.foreground": "#E6EAF0",
-    "dropdown.border": "#2A3445",
+    "dropdown.border": "#69552B",
     "dropdown.listBackground": "#171C25",
     "scrollbarSlider.background": "#2E374480",
     "scrollbarSlider.hoverBackground": "#3E4A5CB0",
     "scrollbarSlider.activeBackground": "#E8B84ACC",
     "badge.background": "#E8B84A",
     "badge.foreground": "#101216",
-    "progressBar.background": "#E8B84A",
+    "progressBar.background": "#FFC94A",
     "notificationCenterHeader.background": "#1C2330",
     "notificationCenterHeader.foreground": "#E6EAF0",
     "notifications.background": "#171C25",
     "notifications.foreground": "#E6EAF0",
-    "notifications.border": "#1C2330",
+    "notifications.border": "#69552B",
     "notificationLink.foreground": "#4D8DCC",
-    "peekView.border": "#4D8DCC",
+    "peekView.border": "#FFC94A",
     "peekViewEditor.background": "#14171E",
     "peekViewEditorGutter.background": "#14171E",
     "peekViewEditor.matchHighlightBackground": "#264F78",
@@ -157,8 +157,8 @@ $jsonContent = @'
     "peekViewTitleDescription.foreground": "#929BA8",
     "peekViewTitleLabel.foreground": "#E6EAF0",
     "panel.background": "#171C25",
-    "panel.border": "#1C2330",
-    "panelTitle.activeBorder": "#E8B84A",
+    "panel.border": "#69552B",
+    "panelTitle.activeBorder": "#FFC94A",
     "panelTitle.activeForeground": "#E6EAF0",
     "panelTitle.inactiveForeground": "#929BA8",
     "terminal.background": "#101216",
@@ -187,18 +187,19 @@ $jsonContent = @'
     "gitDecoration.stageModifiedResourceForeground": "#E8B84A",
     "gitDecoration.stageDeletedResourceForeground": "#FF626B",
     "debugToolBar.background": "#171C25",
-    "debugToolBar.border": "#1C2330",
+    "debugToolBar.border": "#69552B",
     "editorWidget.background": "#171C25",
     "editorWidget.foreground": "#E6EAF0",
-    "editorWidget.border": "#1C2330",
+    "editorWidget.border": "#69552B",
     "editorSuggestWidget.background": "#171C25",
-    "editorSuggestWidget.border": "#4D8DCC",
+    "editorSuggestWidget.border": "#E8B84A",
     "editorSuggestWidget.foreground": "#E6EAF0",
     "editorSuggestWidget.selectedBackground": "#1B385C",
-    "editorSuggestWidget.highlightForeground": "#E8B84A",
+    "editorSuggestWidget.highlightForeground": "#FFC94A",
     "editorHoverWidget.background": "#171C25",
-    "editorHoverWidget.border": "#4D8DCC",
-    "editorHoverWidget.foreground": "#E6EAF0"
+    "editorHoverWidget.border": "#E8B84A",
+    "editorHoverWidget.foreground": "#E6EAF0",
+    "focusBorder": "#FFC94A"
   },
   "tokenColors": [
     {
@@ -491,7 +492,12 @@ function Set-ThemeColor {
         $bgNode = $colorNode.SelectSingleNode("Background")
         if (-not $bgNode) {
             $bgNode = $category.OwnerDocument.CreateElement("Background")
-            $colorNode.AppendChild($bgNode) | Out-Null
+            $existingFg = $colorNode.SelectSingleNode("Foreground")
+            if ($existingFg) {
+                $colorNode.InsertBefore($bgNode, $existingFg) | Out-Null
+            } else {
+                $colorNode.AppendChild($bgNode) | Out-Null
+            }
         }
         $bgNode.SetAttribute("Type", "CT_RAW")
         $bgNode.SetAttribute("Source", $bgHex.TrimStart('#').ToUpper())
@@ -524,40 +530,93 @@ function Get-OrCreateCategory {
     return $cat
 }
 
-# 1. Enhance Environment Category
+# -------------------------------------------------------------
+# 1. Environment Category ({624ed9c3-bdfd-41fa-96c3-7c824ea32e3d})
+# -------------------------------------------------------------
 $envCat = Get-OrCreateCategory $themeElement "Environment" "{624ed9c3-bdfd-41fa-96c3-7c824ea32e3d}"
+
+# Window Chrome & Toolbars
 Set-ThemeColor $envCat "MainWindowActive" "FF101216" "FFE6EAF0"
 Set-ThemeColor $envCat "MainWindowInactive" "FF101216" "FF929BA8"
 Set-ThemeColor $envCat "TitleBarActive" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $envCat "TitleBarInactive" "FF101216" "FF929BA8"
+Set-ThemeColor $envCat "TitleBarBorder" "FF69552B" $null
 Set-ThemeColor $envCat "CommandBarGradientBegin" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $envCat "CommandBarGradientEnd" "FF171C25" "FFE6EAF0"
-Set-ThemeColor $envCat "CommandBarBorder" "FF1C2330" $null
+Set-ThemeColor $envCat "CommandBarBorder" "FF69552B" $null
+Set-ThemeColor $envCat "CommandBarToolBarBorder" "FF69552B" $null
+Set-ThemeColor $envCat "CommandBarToolBarSeparator" "FF69552B" $null
+Set-ThemeColor $envCat "CommandBarToolBarSeparatorHighlight" "FFE8B84A" $null
 Set-ThemeColor $envCat "CommandBarMenuBackgroundGradientBegin" "FF171C25" $null
 Set-ThemeColor $envCat "CommandBarMenuBackgroundGradientEnd" "FF171C25" $null
-Set-ThemeColor $envCat "CommandBarMenuBorder" "FF1C2330" $null
+Set-ThemeColor $envCat "CommandBarMenuBorder" "FF69552B" $null
+Set-ThemeColor $envCat "CommandBarMenuSeparator" "FF69552B" $null
 Set-ThemeColor $envCat "CommandBarMenuItemMouseOver" "FF1C2330" "FFE6EAF0"
-Set-ThemeColor $envCat "CommandBarMenuItemMouseOverBorder" "FF4D8DCC" $null
+Set-ThemeColor $envCat "CommandBarMenuItemMouseOverBorder" "FFE8B84A" $null
+Set-ThemeColor $envCat "CommandBarSelectedBorder" "FFFFC94A" $null
+Set-ThemeColor $envCat "CommandBarHoverOverSelectedIconBorder" "FFFFC94A" $null
+
+# Status Bar
 Set-ThemeColor $envCat "StatusBarDefault" "FF12151B" "FF929BA8"
 Set-ThemeColor $envCat "StatusBarDebugging" "FF1A365D" "FFE6EAF0"
 Set-ThemeColor $envCat "StatusBarBuilding" "FF171C25" "FFE8B84A"
 Set-ThemeColor $envCat "StatusBarNoSolution" "FF101216" "FF929BA8"
 Set-ThemeColor $envCat "StatusBarText" $null "FF929BA8"
-Set-ThemeColor $envCat "StatusBarHighlight" "FF1C2330" "FFE8B84A"
+Set-ThemeColor $envCat "StatusBarHighlight" "FF1C2330" "FFFFC94A"
+Set-ThemeColor $envCat "StatusBarBorder" "FF69552B" $null
+
+# Tool Windows & Golden Panel Borders
 Set-ThemeColor $envCat "ToolWindowBackground" "FF171C25" "FFE6EAF0"
-Set-ThemeColor $envCat "ToolWindowBorder" "FF1C2330" $null
+Set-ThemeColor $envCat "ToolWindowBorder" "FF69552B" $null
+Set-ThemeColor $envCat "PanelBorder" "FF69552B" $null
+Set-ThemeColor $envCat "PanelSeparator" "FF69552B" $null
+Set-ThemeColor $envCat "PanelSubGroupSeparator" "FF69552B" $null
+Set-ThemeColor $envCat "ToolWindowTabBorder" "FF69552B" $null
+Set-ThemeColor $envCat "ToolWindowTabSeparator" "FF69552B" $null
 Set-ThemeColor $envCat "ToolWindowTabSelectedTab" "FF171C25" "FFE6EAF0"
-Set-ThemeColor $envCat "ToolWindowTabSelectedBorder" "FFE8B84A" $null
+Set-ThemeColor $envCat "ToolWindowTabSelectedBorder" "FFFFC94A" $null
+Set-ThemeColor $envCat "ToolWindowTabMouseOverBorder" "FFE8B84A" $null
+Set-ThemeColor $envCat "ToolWindowFloatingFrame" "FFE8B84A" $null
+Set-ThemeColor $envCat "ToolWindowFloatingFrameInactive" "FF69552B" $null
+Set-ThemeColor $envCat "ToolWindowButtonHoverActiveBorder" "FFE8B84A" $null
+Set-ThemeColor $envCat "ControlOutline" "FF69552B" $null
+
+# Document Tabs & Group Separators
 Set-ThemeColor $envCat "FileTabBackground" "FF171C25" "FF929BA8"
-Set-ThemeColor $envCat "FileTabBorder" "FF1C2330" $null
-Set-ThemeColor $envCat "FileTabSelectedBorder" "FFE8B84A" $null
+Set-ThemeColor $envCat "FileTabBorder" "FF69552B" $null
+Set-ThemeColor $envCat "FileTabInactiveBorder" "FF69552B" $null
+Set-ThemeColor $envCat "FileTabSelectedBorder" "FFFFC94A" $null
+Set-ThemeColor $envCat "FileTabDocumentBorderBackground" "FF69552B" $null
+Set-ThemeColor $envCat "FileTabInactiveDocumentBorderEdge" "FF69552B" $null
+Set-ThemeColor $envCat "FileTabActiveGroupBackground" "FF101216" $null
+Set-ThemeColor $envCat "EditorAdditionalContentBorder" "FF69552B" $null
+
+# Splitters & Resize Grips (Separators between editor and docked panels)
+Set-ThemeColor $envCat "HorizontalResizeGrip" "FF69552B" $null
+Set-ThemeColor $envCat "VerticalResizeGripBegin" "FF69552B" $null
+Set-ThemeColor $envCat "VerticalResizeGripMiddle" "FF69552B" $null
+Set-ThemeColor $envCat "VerticalResizeGripEnd" "FF69552B" $null
+Set-ThemeColor $envCat "AutoHideResizeGrip" "FF69552B" $null
+
+# Scrollbars
 Set-ThemeColor $envCat "ScrollBar" "FF101216" $null
 Set-ThemeColor $envCat "ScrollBarArrowBackground" "FF101216" $null
 Set-ThemeColor $envCat "ScrollBarThumb" "FF2E3744" $null
 Set-ThemeColor $envCat "ScrollBarThumbHover" "FF3E4A5C" $null
 Set-ThemeColor $envCat "ScrollBarThumbPressed" "FFE8B84A" $null
 
-# 2. Text Editor Category (Fonts & Colors Text Editor Category: {a27b4e24-a735-4d1d-b8e7-9716e1e3d8e0})
+# Controls & Focus States
+Set-ThemeColor $envCat "SearchBoxBorder" "FF69552B" $null
+Set-ThemeColor $envCat "SearchBoxMouseOverBorder" "FFE8B84A" $null
+Set-ThemeColor $envCat "SearchBoxPressedBorder" "FFFFC94A" $null
+Set-ThemeColor $envCat "ComboBoxBorder" "FF69552B" $null
+Set-ThemeColor $envCat "ComboBoxFocusedBorder" "FFFFC94A" $null
+Set-ThemeColor $envCat "ComboBoxFocusBox" "FFFFC94A" $null
+Set-ThemeColor $envCat "ToolTipBorder" "FFE8B84A" $null
+
+# -------------------------------------------------------------
+# 2. Text Editor Category ({a27b4e24-a735-4d1d-b8e7-9716e1e3d8e0})
+# -------------------------------------------------------------
 $textEditorCat = Get-OrCreateCategory $themeElement "Text Editor" "{a27b4e24-a735-4d1d-b8e7-9716e1e3d8e0}"
 Set-ThemeColor $textEditorCat "Plain Text" "FF101216" "FFE6EAF0"
 Set-ThemeColor $textEditorCat "Selected Text" "FF1B385C" "FFE6EAF0"
@@ -573,7 +632,9 @@ Set-ThemeColor $textEditorCat "Syntax Error" $null "FFFF626B"
 Set-ThemeColor $textEditorCat "Compiler Error" $null "FFFF626B"
 Set-ThemeColor $textEditorCat "Warning" $null "FFE8B84A"
 
+# -------------------------------------------------------------
 # 3. Roslyn Text Editor MEF Items Category
+# -------------------------------------------------------------
 $roslynCat = Get-OrCreateCategory $themeElement "Roslyn Text Editor MEF Items" "{75a05685-00a8-4ded-bae5-e7a50bfa929a}"
 Set-ThemeColor $roslynCat "keyword" $null "FF4D8DCC"
 Set-ThemeColor $roslynCat "keyword - control" $null "FF5EA1E6"
@@ -603,24 +664,75 @@ Set-ThemeColor $roslynCat "xml doc comment - name" $null "FF5C82A6"
 Set-ThemeColor $roslynCat "xml doc comment - attribute name" $null "FF42D9D0"
 Set-ThemeColor $roslynCat "xml doc comment - attribute value" $null "FFE7B45A"
 
-# 4. Statement Completion Category
+# -------------------------------------------------------------
+# 4. CommonControls Category ({c01072a1-a915-4abf-89b7-e2f9e8ec4c7f})
+# -------------------------------------------------------------
+$commonControlsCat = Get-OrCreateCategory $themeElement "CommonControls" "{c01072a1-a915-4abf-89b7-e2f9e8ec4c7f}"
+Set-ThemeColor $commonControlsCat "FocusVisual" "FFFFC94A" $null
+Set-ThemeColor $commonControlsCat "ButtonBorderHover" "FFE8B84A" $null
+Set-ThemeColor $commonControlsCat "ButtonFocused" "FFFFC94A" $null
+Set-ThemeColor $commonControlsCat "TextBoxBorder" "FF69552B" $null
+Set-ThemeColor $commonControlsCat "TextBoxBorderFocused" "FFFFC94A" $null
+Set-ThemeColor $commonControlsCat "ComboBoxBorder" "FF69552B" $null
+Set-ThemeColor $commonControlsCat "ComboBoxBorderFocused" "FFFFC94A" $null
+Set-ThemeColor $commonControlsCat "InnerTabActiveIndicator" "FFFFC94A" $null
+Set-ThemeColor $commonControlsCat "InnerTabSelectedIndicator" "FFFFC94A" $null
+
+# -------------------------------------------------------------
+# 5. CommonDocument Category ({72eb4027-f4ae-4b6c-9cc2-dfd5b49d9415})
+# -------------------------------------------------------------
+$commonDocCat = Get-OrCreateCategory $themeElement "CommonDocument" "{72eb4027-f4ae-4b6c-9cc2-dfd5b49d9415}"
+Set-ThemeColor $commonDocCat "InnerTabActiveIndicator" "FFFFC94A" $null
+Set-ThemeColor $commonDocCat "InnerTabSelectedIndicator" "FFFFC94A" $null
+Set-ThemeColor $commonDocCat "ListItemBorderFocused" "FFFFC94A" $null
+Set-ThemeColor $commonDocCat "ListItemBorderSelected" "FFE8B84A" $null
+Set-ThemeColor $commonDocCat "ListItemBorderHover" "FF69552B" $null
+
+# -------------------------------------------------------------
+# 6. TreeView Category ({92ecf08e-8b13-4cf4-99e9-ae2692382185})
+# -------------------------------------------------------------
+$treeViewCat = Get-OrCreateCategory $themeElement "TreeView" "{92ecf08e-8b13-4cf4-99e9-ae2692382185}"
+Set-ThemeColor $treeViewCat "Background" "FF171C25" $null
+Set-ThemeColor $treeViewCat "DragOverItem" "FFE8B84A" $null
+Set-ThemeColor $treeViewCat "SelectedItemActiveGlyph" "FFFFC94A" $null
+
+# -------------------------------------------------------------
+# 7. Statement Completion Category
+# -------------------------------------------------------------
 $stmtCompCat = Get-OrCreateCategory $themeElement "Statement Completion" "{C1614BB1-734F-4A31-BD42-5AE6275E16D2}"
 Set-ThemeColor $stmtCompCat "Plain Text" "FF171C25" "FFE6EAF0"
 Set-ThemeColor $stmtCompCat "Selected Text" "FF1B385C" "FFE6EAF0"
 
-# 5. ToolTips Category
+# -------------------------------------------------------------
+# 8. ToolTips Category
+# -------------------------------------------------------------
 $tooltipsCat = Get-OrCreateCategory $themeElement "Editor Tooltip" "{A9A5637F-B2A8-422E-8FB5-DFB4625F0111}"
 Set-ThemeColor $tooltipsCat "Plain Text" "FF171C25" "FFE6EAF0"
 
-# 6. Find Results Category
+# -------------------------------------------------------------
+# 9. Find Results Category
+# -------------------------------------------------------------
 $findResCat = Get-OrCreateCategory $themeElement "Find Results" "{5C48B2CB-0366-4FBF-9786-0BB37E945687}"
 Set-ThemeColor $findResCat "Plain Text" "FF101216" "FFE6EAF0"
 Set-ThemeColor $findResCat "Selected Text" "FF1B385C" "FFE6EAF0"
 
-# 7. Output Window Category
+# -------------------------------------------------------------
+# 10. Output Window Category
+# -------------------------------------------------------------
 $outputCat = Get-OrCreateCategory $themeElement "Output Window" "{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}"
 Set-ThemeColor $outputCat "Plain Text" "FF101216" "FFE6EAF0"
 Set-ThemeColor $outputCat "Selected Text" "FF1B385C" "FFE6EAF0"
+
+# -------------------------------------------------------------
+# 11. Command Window & Package Manager Console
+# -------------------------------------------------------------
+$cmdCat = Get-OrCreateCategory $themeElement "Command Window" "{ee1be240-4e81-4beb-8eea-54322b6b1bf5}"
+Set-ThemeColor $cmdCat "Plain Text" "FF101216" "FFE6EAF0"
+Set-ThemeColor $cmdCat "Selected Text" "FF1B385C" "FFE6EAF0"
+
+$pmcCat = Get-OrCreateCategory $themeElement "Package Manager Console" "{f9d6bce6-c669-41db-8ee7-dd953828685b}"
+Set-ThemeColor $pmcCat "Plain Text" "FF101216" "FFE6EAF0"
+Set-ThemeColor $pmcCat "Selected Text" "FF1B385C" "FFE6EAF0"
 
 # Save customized vstheme XML
 $finalVsthemePath = "src\DarkKnightTheme\DarkKnight.vstheme"

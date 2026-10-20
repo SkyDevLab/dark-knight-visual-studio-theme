@@ -218,8 +218,9 @@ function Generate-IdePreviewScreenshot([string]$outPath, [string]$titleText, [st
     $cMainBg = [System.Drawing.ColorTranslator]::FromHtml("#101216")
     $cSurface = [System.Drawing.ColorTranslator]::FromHtml("#171C25")
     $cHeader = [System.Drawing.ColorTranslator]::FromHtml("#1C2330")
-    $cBorder = [System.Drawing.ColorTranslator]::FromHtml("#1C2330")
-    $cGold = [System.Drawing.ColorTranslator]::FromHtml("#E8B84A")
+    $cBorder = [System.Drawing.ColorTranslator]::FromHtml("#69552B")       # Subtle Antique Gold for Inactive Borders
+    $cGold = [System.Drawing.ColorTranslator]::FromHtml("#E8B84A")         # Primary Batman Gold
+    $cGoldBright = [System.Drawing.ColorTranslator]::FromHtml("#FFC94A")   # Bright Gold for Selected Elements
     $cGothamBlue = [System.Drawing.ColorTranslator]::FromHtml("#4D8DCC")
     $cCyan = [System.Drawing.ColorTranslator]::FromHtml("#42D9D0")
     $cMint = [System.Drawing.ColorTranslator]::FromHtml("#52E3DA")
@@ -278,7 +279,7 @@ function Generate-IdePreviewScreenshot([string]$outPath, [string]$titleText, [st
     # Active Tab: CrimeReportService.cs
     $activeTabRect = [System.Drawing.Rectangle]::new(0, 66, 210, 32)
     $g.FillRectangle([System.Drawing.SolidBrush]::new($cMainBg), $activeTabRect)
-    $g.DrawLine([System.Drawing.Pen]::new($cGold, [float]2.5), 0, 67, 210, 67)
+    $g.DrawLine([System.Drawing.Pen]::new($cGoldBright, [float]2.5), 0, 67, 210, 67)
     $g.DrawLine([System.Drawing.Pen]::new($cBorder, 1), 210, 66, 210, 98)
     $g.DrawString("CrimeReportService.cs", $fontUIBold, [System.Drawing.SolidBrush]::new($cTextPrimary), 16, 73)
     $g.DrawString("x", $fontUI, [System.Drawing.SolidBrush]::new($cTextSecondary), 190, 72)
@@ -579,15 +580,15 @@ $bg.DrawString("BATCAVE THEME FOR MICROSOFT VISUAL STUDIO 2022", $fontSub, $brus
 $bg.DrawString("Cinematic nocturnal aesthetic engineered for professional C# and .NET workstations.", $fontTagline, $brushWhite, 366, 305)
 
 # Badges
-$badges = @("C# & .NET Roslyn Colors", "54 VS Categories Themed", "MEF Viewport Backgrounds", "WPF Settings Panel")
+$badges = @("C# & .NET Roslyn", "Gold Panel Borders", "54 Categories Themed", "MEF Watermarks & Settings")
 $bx = 366
 foreach ($badge in $badges) {
     $sizeB = $bg.MeasureString($badge, $fontBadge)
     $bRect = [System.Drawing.RectangleF]::new($bx, 360, ($sizeB.Width + 20), 32)
     $bg.FillRectangle([System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml("#1C2330")), $bRect)
-    $bg.DrawRectangle([System.Drawing.Pen]::new([System.Drawing.ColorTranslator]::FromHtml("#2A3445"), 1), $bRect.X, $bRect.Y, $bRect.Width, $bRect.Height)
+    $bg.DrawRectangle([System.Drawing.Pen]::new([System.Drawing.ColorTranslator]::FromHtml("#69552B"), 1), $bRect.X, $bRect.Y, $bRect.Width, $bRect.Height)
     $bg.DrawString($badge, $fontBadge, $brushWhite, ($bx + 10), 366)
-    $bx += [int]($sizeB.Width + 30)
+    $bx += [int]($sizeB.Width + 24)
 }
 
 $bg.Dispose()
