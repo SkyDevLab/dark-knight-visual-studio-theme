@@ -19,9 +19,12 @@ if (-not (Test-Path $vswhere)) {
     throw "vswhere.exe not found at $vswhere. Please ensure Visual Studio 2022 is installed."
 }
 
-$vsPath = & $vswhere -latest -requires Microsoft.Component.MSBuild -property installationPath
+$vsPath = & $vswhere -latest -requires Microsoft.VisualStudio.Component.VSSDK -property installationPath
 if (-not $vsPath) {
-    throw "Visual Studio 2022 installation with MSBuild not detected."
+    $vsPath = & $vswhere -latest -requires Microsoft.Component.MSBuild -property installationPath
+}
+if (-not $vsPath) {
+    throw "Visual Studio installation with MSBuild not detected."
 }
 Write-Host "Found Visual Studio at: $vsPath" -ForegroundColor Green
 

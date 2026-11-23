@@ -5,15 +5,15 @@
 </p>
 
 <p align="center">
-  <strong>A premium, cinematic Batman-inspired dark theme for Microsoft Visual Studio 2022.</strong><br/>
+  <strong>A premium, cinematic Batman-inspired dark theme for Microsoft Visual Studio 2022 &amp; 2026.</strong><br/>
   Featuring a distinctive Batcave workstation aesthetic with elegant golden panel borders, professional C# and .NET syntax highlighting, and an optional non-intrusive editor background system.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Visual_Studio-2022_v17.0+-5C2D91?style=flat&logo=visualstudio&logoColor=white" alt="Visual Studio 2022" />
+  <img src="https://img.shields.io/badge/Visual_Studio-2022_%26_2026-5C2D91?style=flat&logo=visualstudio&logoColor=white" alt="Visual Studio 2022 & 2026" />
   <img src="https://img.shields.io/badge/.NET_Framework-4.7.2+-512BD4?style=flat&logo=dotnet&logoColor=white" alt=".NET 4.7.2" />
   <img src="https://img.shields.io/badge/Architecture-x64_amd64-blue?style=flat" alt="x64" />
-  <img src="https://img.shields.io/badge/Package-VSIX_v1.2.0-informational?style=flat" alt="VSIX" />
+  <img src="https://img.shields.io/badge/Package-VSIX_v1.2.1-informational?style=flat" alt="VSIX" />
   <img src="https://img.shields.io/badge/License-MIT-gold?style=flat" alt="MIT License" />
 </p>
 
@@ -21,7 +21,7 @@
 
 ## Overview
 
-**Dark Knight** transforms Visual Studio 2022 into a sophisticated Batcave workstation. Engineered for professional .NET developers, it replaces standard high-glare surfaces with a balanced near-black charcoal foundation (`#101216`), deep graphite tool windows (`#171C25`), muted antique gold panel borders (`#69552B`), bright gold active accents (`#FFC94A`), and electric Gotham blue highlights (`#4D8DCC`).
+**Dark Knight** transforms Visual Studio 2022 and Visual Studio 2026 into a sophisticated Batcave workstation. Engineered for professional .NET developers, it replaces standard high-glare surfaces with a balanced near-black charcoal foundation (`#101216`), deep graphite tool windows (`#171C25`), muted antique gold panel borders (`#69552B`), bright gold active accents (`#FFC94A`), and electric Gotham blue highlights (`#4D8DCC`).
 
 This is a **genuine Microsoft Visual Studio Extension (VSIX)** built with the official Visual Studio SDK, not a Visual Studio Code port. It delivers:
 
