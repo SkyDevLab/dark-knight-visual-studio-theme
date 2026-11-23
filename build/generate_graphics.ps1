@@ -203,8 +203,13 @@ function Generate-IconPng([string]$outPath, [int]$size) {
     Write-Host "Generated icon: $outPath ($size x $size)"
 }
 
-Generate-IconPng "$resDir\Icon.png" 128
-Generate-IconPng "$assetsDir\icon_256.png" 256
+# Preserve user's official Gold Bat Emblem icon (do not overwrite with procedural generator)
+if (-not (Test-Path "$resDir\Icon.png")) {
+    Generate-IconPng "$resDir\Icon.png" 128
+}
+if (-not (Test-Path "$assetsDir\icon_256.png")) {
+    Generate-IconPng "$assetsDir\icon_256.png" 256
+}
 
 # 3. Generate Screenshots and Preview Assets
 function Generate-IdePreviewScreenshot([string]$outPath, [string]$titleText, [string]$subtitleText, [string]$mode) {
